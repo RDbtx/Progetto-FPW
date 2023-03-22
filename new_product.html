@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Insert</title>
+        <meta name="author" content="Diee Tech Group">
+        <meta name="description" content="Sito per sviluppo di nuove tecnologie">
+        <meta name="keywords" content="DIEE, technologies, web, internet, windows, 
+              android, mac, store, router, fpga, arduino, microcontrollore, oscilloscopio"> 
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html"><img src="img/Black-logo.png" width="150" height="150" alt="Logo DIEE Tech"/></a>
+             &nbsp;&nbsp;<b><a href="store.html">-Store</a></b> &nbsp;&nbsp;<b><a href=".html">-Recensioni</a></b> &nbsp;&nbsp;
+            <b><a href=".html">-Chi siamo</a></b> &nbsp;&nbsp;<b><a href="login.html">-Login</a></b>
+        </nav>
+        <hr>
+        
+        <header>    
+            <h1>DIEE TECH<br><small>Dieedaci Technologies</small></h1>
+            <h4>Inserisci prodotto</h4>
+        </header>
+        
+        <main>
+            <!--Form inserimento prodotti-->
+            <form>
+                
+            Prodotto: <select name = "product" required="">
+                        <option value="" selected disabled hidden>Nessun prodotto selezionato</option>
+                        <option value ="FPGA Artix 7">FPGA Artix 7</option>
+                        <option value ="Oscilloscopio da banco">Oscilloscopio da banco</option>
+                        <option value ="Router 4300 series">Router 4300 series</option>
+                        <option value ="Arduino Uno">Arduino Uno</option>
+                      </select>
+            <label for="quantity">Quantità:</label>
+            <input type="number" id="quantity" name="quantity" min = "1" max ="1000" value = "1">
+            <br><br>
+            <!--textare per inserimento note-->
+            <label for ="note">Note:</label>
+            <textarea id = "note" rows ="2" cols ="10" > </textarea>
+            <br><br>
+            <input type="submit">&nbsp <input type ="reset">
+            </form>
+            
+        </main>
+        
+        
+        <footer>
+           <hr>
+           <img src="img\DT_no-bk_B.png" height="150" alt="Logo DIEE Tech"/> <br>
+           <b>DIEE Tech</b>: <br>
+           <i>Edificio M <br>
+               Facoltà di Ingegneria <br>
+               Via Marengo 2, 09123 Cagliari (CA)
+           </i>
+        </footer>
+    </body>
+</html>
