@@ -5,8 +5,9 @@
         <title>DIEE Tech</title>
         <link rel="shortcut icon" href="img/White-background-logo.png" />
         <meta name="author" content="Diee Tech Group">
-        <meta name="description" content="Sito per sviluppo di nuove tecnologie">
-        <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac">
+        <meta name="description" content="Sito per sviluppo di nuove tecnologie e vendita di supporti per aziende
+              tech e nell ambito elettrico elettronico e informatico, sezione di login e registrazione account">
+        <meta name="keywords" content="DIEE,aziende, technologies,registrazione,login,acccesso,accedi,profilo">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -24,44 +25,71 @@
        
         <hr>
         
-        <aside>
-            <h3>Welcome to DIEE Account</h3>
-            <p>Nunc odio risus, ullamcorper in venenatis at, egestas in neque.<br> 
-               Mauris non dolor mi. Suspendisse ullamcorper,<br>
-               est non finibus egestas, ante justo suscipit erat,<br>
-               in interdum erat enim sit amet arcu. Donec vel risus commodo,<br>
-               aliquet turpis id, vestibulum dolor. Nam in vestibulum felis.<br>
-               Suspendisse rhoncus mi sit amet tincidunt aliquam.<br>
-               Aenean ac hendrerit felis. Pellentesque sed tempus orci.
-               <br>
-               <br>
-            </p>
-        </aside>
+        <main>
+            <section>
+                <h3>Welcome to DIEE Account</h3>
+                <p>Nunc odio risus, ullamcorper in venenatis at, egestas in neque.<br> 
+                Mauris non dolor mi. Suspendisse ullamcorper,<br>
+                est non finibus egestas, ante justo suscipit erat,<br>
+                in interdum erat enim sit amet arcu. Donec vel risus commodo,<br>
+                aliquet turpis id, vestibulum dolor. Nam in vestibulum felis.<br>
+                Suspendisse rhoncus mi sit amet tincidunt aliquam.<br>
+                Aenean ac hendrerit felis. Pellentesque sed tempus orci.
+                <br>
+                <br>
+                </p>
+            </section>
         
-        <aside>
-            <form action="login" method="POST">
-                <label for="e-mail">e-mail</label>
-                <input type="text" name="e-mail" id="e-mail">
+            <aside>
+                <form action="login" method="POST">
+                    <label for="e-mail">e-mail</label>
+                    <input type="text" name="e-mail" id="e-mail">
             
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
             
-                <input type="submit" value="Accedi">
+                    <input type="submit" value="Accedi">
+                </form>
+        
+                <p>
+                    non hai ancora un account? <a href="#registrazione">registrati ora</a>
+                </p>
+            </aside>      
+        
+        
+        <hr>
+        <br>
+        <section>
             
-
+                <h3 id="registrazione">Welcome to DIEE Registration</h3>
+                <P>Registrandosi a questo sito si accettano tutte le informative<br> sulla privacy
+                    <a href="https://www.youtube.com/watch?v=O7Jbryr5XSs" target="_blank">presenti qui</a>.<br>
+                    Pellentesque sagittis mollis sapien, ac laoreet libero porta ac.<br>
+                    In id lacus vitae augue accumsan cursus in nec sem.<br>
+                    Aenean ut tortor at ligula interdum imperdiet. 
+                </P>
+                
+                <p>compilare il form per potersi registrare:</P>
+            <form>
+                <label for="rege-mail">e-mail</label>
+                <input type="email" id="rege-mail" placeholder="...@gmail.com" name="e-mail">
+                <br>
+                <label for="regpassword">password</label>
+                <input type="password" id="regpassword" placeholder="password" name="password">
+                <br>
+                <label for="psw-repeat">ripetere la password</label>
+                <input type="password" placeholder="password" name="psw-repeat" id="psw-repeat">
+                <br>
+                <button type="submit">registrati</button>
+                <br>
+                <br>
+                
             </form>
-        </aside>
-        
-        
-        <div>
-            <p>
-                non hai ancora un account? <a href="registrazione.html">registrati ora</a>
-            </p>
-        </div>
-        
+        </section>
+        </main>
         <footer>
             <hr>
-            <img src="img\White-background-logo.png" height="150" alt="Logo DIEE Tech"/> <br>
+            <img src="img\White-background-logo.png" height="150" alt="Logo DIEE Tech"> <br>
             <b>DIEE Tech</b>: <br>
             <i>Edificio M <br>
                 Facoltà di Ingegneria <br>
@@ -74,4 +102,4 @@
 </html>    
             
             
-            
+     
