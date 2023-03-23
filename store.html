@@ -6,27 +6,33 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head>
         <title>DIEE Tech - Prodotti</title>
+        <link type="text/css" rel="stylesheet" href="css/mycss.css" media="screen">
+        <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Andrea Amato">
-        <meta name="description" content="Sito per sviluppo di nuove tecnologie">
-        <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac">
+        <meta name="description" content="Sito per sviluppo di nuove tecnologie - Lista Prodotti">
+        <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac, prodotti, oscilloscopio, router, ssd, arduino, fpga, verilog, vivado, cisco, switch">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <nav>
-            <a href="index.html"><img src="img/DT_bk_W.png" width="150" height="150" alt="Logo DIEE Tech"/></a>
-            <b><a href="store.html">Store</a></b> 
-            <b><a href="new_product.html">Inserisci prodotto</a></b> 
-            <b><a href="chi_siamo.html">Chi siamo</a></b> 
-            <b><a href="login.html">Login</a></b>
+            <a href="index.html"><img src="img/DT_bk.png" style="float:left" width="150" height="150" alt="Logo DIEE Tech"/></a>
+            <ul>
+                <li><a href="store.html">Store</a></li> 
+                <li><a href="new_product.html">Inserisci prodotto</a></li> 
+                <li><a href="chi_siamo.html">Chi siamo</a></li> 
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <hr> 
         </nav>
-        <hr>
-        <header>    
-            <h1>DIEE TECH<br><small>Dieedaci Technologies</small></h1>
-            <h4>Lista prodotti</h4>
+        <header>
+            <p id="diee">DIEE TECH</p>
+            <p id="dieedaci">DIEEDACI TECHNOLOGIES</p>
         </header>
         <main>
-            <table>
+            <article>
+                <h2>Lista prodotti</h2>
+                <table id="prodotti">
                 <tr>
                     <th>Nome</th>
                     <th>Descrizione</th>
@@ -67,26 +73,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <td>267</td>
                     <td> <img src="img/immagini-index/arduino.jpeg" width="100" alt="Arduino"/> </td>
                 </tr>
-            </table>
-            <article>
-            <br>
-            <h3>Our tools are used all over the world in some of the best-known companies.</h3>
-            <br>
-            <img src="img/Logo-Diee.png" alt="DIEE" height="50">
-            <img src="img/Logo_Università_di_Cagliari.jpg" alt="UNICA" height="50">
-            <img src="img/Logo-PRA.jpg" alt="pra_lab" height="50">
-        </article>  
+                </table>
+            </article>
         </main>
         <footer>
             <hr>
-            <img src="img\DT_no-bk_B.png" height="150" alt="Logo DIEE Tech"/> <br>
+            <img src="img\DT_no-bk_W.png" style="float:left; margin-bottom: 0px" height="150" alt="Logo DIEE Tech"/>
+            <p style="float: left;margin-top: 25px; margin-right: 150px">
             <b>DIEE Tech</b>: <br>
             <i>Edificio M <br>
                 Facoltà di Ingegneria <br>
                 Via Marengo 2, 09123 Cagliari (CA)
             </i>
+            </p>
+            <p style="margin-top: 20px">
+                <b>Contatti:</b><br>
+                <a href="chi_siamo.html#Amato">Andrea Amato</a><br>
+                <a href="chi_siamo.html#Deidda">Riccardo Deidda</a><br>
+                <a href="chi_siamo.html#Vinci">Alessio Vinci</a><br>
+                <a href="chi_siamo.html#Lecca">Riccardo Lecca</a><br>
+            </p>
+            <br>
         </footer>
     </body>
 </html>
+
 
 
