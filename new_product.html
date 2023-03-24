@@ -32,72 +32,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <h1>DIEE TECH<br><small>Dieedaci Technologies</small></h1>
             
         </header>
-        <i>Pagina dedicata all'aggiornamento del catalogo</i>
+        <i>Aggiornamento del catalogo</i>
         <br>
-        Qui è possibile <a href="#segnalibro1">aggiornare</a> un prodotto già presente nel catalogo oppure 
-        <a href="#segnalibro2">inserire</a> manualmente un nuovo prodotto non ancora catalogato.
+        
         <br>
         <main>
-            <section>
-            <!--PRODOTTI GIÀ PRESENTI NEL CATALOGO-->
-            <form>
-            <a id = "segnalibro1"><h4>Aggiornamento prodotto</h4></a>
-            
-            <br>
-            Prodotto: <select name = "product" required="required">
-                        <option value="" selected disabled hidden>Nessun prodotto selezionato</option>
-                        <option value ="FPGA Artix 7">FPGA Artix 7</option>
-                        <option value ="Oscilloscopio da banco">Oscilloscopio da banco</option>
-                        <option value ="Router 4300 series">Router 4300 series</option>
-                        <option value ="Arduino Uno">Arduino Uno</option>
-                      </select>
-            <label for="quantity">Quantità:</label>
-            <input type="number" id="quantity" name="quantity" min = "1" max ="1000" value = "1">
-            <br><br>
-            Programma necessario: <select name = "program" required="required">
-                                    <option value="" selected disabled hidden>Nessun prodotto selezionato</option>
-                                    <option value ="Vivado">Vivado</option>
-                                    <option value ="LabVIEW">LabVIEW</option>
-                                    <option value ="Prompt COmandi">Prompt Comandi</option>
-                                    <option value ="Arduino">Arduino</option>
-                                  </select>
-            <br><br>
-            <label for="prezzo">Prezzo:</label>
-            <input type = "number" id = "prezzo" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" >
-            <br><br>
-            <label for ="description">Descrizione:</label>
-            <textarea rows="2" cols="10" name ="description" id ="description"></textarea>
-            &nbsp;&nbsp;
-            <label for ="image">Immagine:</label>
-            <input type="file" id = "image" name = "image">
-            <br><br>
-            <input type="submit">&nbsp;<input type ="reset">
-            </form>
-            </section>
-            <br><br>
-            
             <section>
             <form>
             <!--PRODOTTI NON PRESENTI NEL CATALOGO-->
             <a id = "segnalibro2"><h4>Nuovo prodotto</h4></a>
             
-            <br>
-            <label for ="product_new">Prodotto: </label>
-            <input type = "text" id = "product_new" name = "product">
-            <label for="quantity_new">Quantità:</label>
-            <input type="number" id="quantity_new" name="quantity" min = "1" max ="1000" value = "1">
+            <label for ="product">Prodotto: *</label>
+            <input type = "text" id = "product" name = "product" required = "required">
+            <label for="quantity">Quantità: *</label>
+            <input type="number" id="quantity" name="quantity" min = "1" max ="1000" value = "1">
             <br><br>
-            <label for = "program_new">Programma necessario:</label>
-            <input type ="text" id = "program_new" name = "product">
+            <label for = "program">Programma necessario:</label>
+            <input type ="text" id = "program" name = "product">
             <br><br>
-            <label for="prezzo_new">Prezzo:</label>
-            <input type = "number" id = "prezzo_new" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" >
+            <label for="prezzo">Prezzo: *</label>
+            <input type = "number" id = "prezzo" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" >
             <br><br>
-            <label for ="description_new">Descrizione:</label>
-            <textarea rows="2" cols="10" name ="description" id ="description_new" required ="required"></textarea>
+            <label for ="description">Descrizione: *</label>
+            <textarea rows="2" cols="10" name ="description" id ="description" required ="required"></textarea>
             &nbsp;&nbsp;
-            <label for ="image_new">Immagine:</label>
-            <input type="file" id = "image_new" name = "image" required="required">
+            <label for ="image">Immagine: *</label>
+            <input type="file" id = "image" name = "image" required="required">
+            <br><br>
+            <i>(<b>Attenzione:</b> I campi obbligatori sono contrassegnati con <b>"*"</b>, accertasi di averli compilati tutti)</i>
             <br><br>
             <input type="submit">&nbsp;<input type ="reset">
             </form>
