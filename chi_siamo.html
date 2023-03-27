@@ -5,12 +5,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>DIEE Tech - Prodotti</title>
+        <title>DIEE Tech - Chi Siamo</title>
         <link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen">
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Andrea Amato">
-        <meta name="description" content="Sito per sviluppo di nuove tecnologie - Lista Prodotti">
-        <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac, prodotti, oscilloscopio, router, ssd, arduino, fpga, verilog, vivado, cisco, switch">
+        <meta name="description" content="Sito per sviluppo di nuove tecnologie">
+        <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -19,63 +19,55 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <a href="index.html"><img class="logo" src="img/DT_bk.png" width="150" height="150" alt="Logo DIEE Tech"/></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><b>Store</b></li> 
+                <li><a href="store.html">Store</a></li> 
                 <li><a href="new_product.html">Inserisci prodotto</a></li> 
-                <li><a href="chi_siamo.html">Chi siamo</a></li> 
+                <li><b>Chi siamo</b></li> 
                 <li><a href="login.html">Login</a></li>
             </ul>
             <hr> 
         </nav>
+       
         <header>
             <p id="diee">DIEE TECH</p>
             <p id="dieedaci">DIEEDACI TECHNOLOGIES</p>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> 
+                Suspendisse nisl eros, ullamcorper vitae elit ac, lacinia congue magna.</h4>
         </header>
+        
         <main>
-            <article>
-                <h2>Lista prodotti</h2>
-                <table id="prodotti">
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrizione</th>
-                    <th>Programmi necessari</th>
-                    <th>Prezzo</th>
-                    <th>Quantità disponibili</th>
-                    <th>Immagine</th>
-                </tr>
-                <tr>
-                    <td>FPGA Artix 7 </td>
-                    <td>Una scheda digitale programmabile tramite linguaggio Verilog. </td>
-                    <td>Vivado</td>
-                    <td>€299,99 </td>
-                    <td>15</td>
-                    <td> <img src="img/immagini-index/FPGA.jpeg" width="100" alt="FPGA"/> </td>
-                </tr>
-                <tr>
-                    <td>Oscilloscopio da banco </td>
-                    <td>Oscilloscopio di archiviazione digitale da banco a 2 canali TBS1072C, 70 MHz </td>
-                    <td>LabVIEW</td>
-                    <td>€1019,99 </td>
-                    <td>5</td>
-                    <td> <img src="img/immagini-index/Osc_2.jpg" width="100" alt="Oscilloscopio"/> </td>
-                </tr>
-                <tr>
-                    <td>Router 4300 series </td>
-                    <td>Un router professionale ideale per reti aziendali, con servizi integrati </td>
-                    <td>Prompt dei comandi in base al sistema operativo</td>
-                    <td>€399,99 </td>
-                    <td>28</td>
-                    <td> <img src="img/immagini-index/router.jpg" width="100" alt="Router"/> </td>
-                </tr>
-                <tr>
-                    <td>Arduino Uno </td>
-                    <td>Un microcontrollore programabile tramite codice Arduino per l'utilizzio di LED e sensori. </td>
-                    <td>Arduino</td>
-                    <td>€29,99 </td>
-                    <td>267</td>
-                    <td> <img src="img/immagini-index/arduino.jpeg" width="100" alt="Arduino"/> </td>
-                </tr>
-                </table>
-            </article>
+            <h1>Il Nostro Team</h1>
+            <p> Esperti ingegneri, discepoli del Dieedaci  </p>
+            <hr>
+            <div id="Amato">
+                <img src="img/immagini-index/AA10.jpg" class="team" height="100" alt="Profilo Amato"/>
+                <h2>Andrea Amato</h2>
+                Capogruppo del team, fu il primo a ricevere 
+                la consacrazione di passare PSD scrivendo con una sola mano.<br>
+                E-mail: <a href="mailto:amato@dieetech.it">amato@dieetech.it</a>
+            </div>   
+            <hr>
+            <div id="Lecca">
+                <img src="img/immagini-index/Lecca.jpg" class="team" height="100" alt="Profilo Lecca"/>
+                <h2>Riccardo Lecca</h2>
+                Ultimo entrato nella setta dei Diee, passò Pais a pieni voti.<br>
+                E-mail: <a href="mailto:lecca@dieetech.it">lecca@dieetech.it</a>
+            </div>
+            <hr>
+            <div id="Deidda">
+                <img src="img/immagini-index/Deidda.jpg" class="team" height="100" alt="Profilo Deidda"/>
+                <h2>Riccardo Deidda</h2>
+                Forte di aver passato PAIS al primo appello, sfidò il gran maestro
+                Dieedaci battendolo senza difficoltà.<br>
+                E-mail: <a href="mailto:deidda@dieetech.it">deidda@dieetech.it</a>
+            </div>
+            <hr>
+            <div id="Vinci">
+                <img src="img/immagini-index/Vinci.jpg" class="team" height="100" alt="Profilo Vinci"/>
+                <h2>Alessio Vinci</h2>
+                Nessuno ebbe mai li coraggio di rifiutare la valutazione del gran 
+                maestro Muscaz, lui si. E' fu inserito nella setta immediatamente.<br>
+                E-mail: <a href="mailto:vinci@dieetech.it">vinci@dieetech.it</a>
+            </div>
         </main>
         <aside>
             <h3>Our tools are used all over the world in some of the best-known companies.</h3>
@@ -88,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <li><img src="img/immagini-index/logo_videolina.png" height="30" alt="Logo Videolina"/></li>
                 <li><img src="img/immagini-index/logo-podda.png" height="50" alt="Logo Podda"/></li>   
             </ul>
-        </aside>
+        </aside>  
         <footer>
             <hr>
             <img src="img\DT_no-bk_W.png" class="logo" height="150" alt="Logo DIEE Tech"/>

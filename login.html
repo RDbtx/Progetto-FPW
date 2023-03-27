@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
--->
-<html>
+
     <head>
-        <title>DIEE Tech - Prodotti</title>
+        <title>DIEE Tech - Login</title>
         <link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen">
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
-        <meta name="author" content="Andrea Amato">
-        <meta name="description" content="Sito per sviluppo di nuove tecnologie - Lista Prodotti">
-        <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac, prodotti, oscilloscopio, router, ssd, arduino, fpga, verilog, vivado, cisco, switch">
+        <meta name="author" content="Diee Tech Group">
+        <meta name="description" content="Sito per sviluppo di nuove tecnologie e vendita di supporti per aziende
+              tech e nell ambito elettrico elettronico e informatico, sezione di login e registrazione account">
+        <meta name="keywords" content="DIEE,aziende, technologies,registrazione,login,acccesso,accedi,profilo">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -19,10 +16,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             <a href="index.html"><img class="logo" src="img/DT_bk.png" width="150" height="150" alt="Logo DIEE Tech"/></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><b>Store</b></li> 
+                <li><a href="store.html">Store</a></li> 
                 <li><a href="new_product.html">Inserisci prodotto</a></li> 
                 <li><a href="chi_siamo.html">Chi siamo</a></li> 
-                <li><a href="login.html">Login</a></li>
+                <li><b>Login</b></li>
             </ul>
             <hr> 
         </nav>
@@ -32,50 +29,53 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </header>
         <main>
             <article>
-                <h2>Lista prodotti</h2>
-                <table id="prodotti">
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrizione</th>
-                    <th>Programmi necessari</th>
-                    <th>Prezzo</th>
-                    <th>Quantità disponibili</th>
-                    <th>Immagine</th>
-                </tr>
-                <tr>
-                    <td>FPGA Artix 7 </td>
-                    <td>Una scheda digitale programmabile tramite linguaggio Verilog. </td>
-                    <td>Vivado</td>
-                    <td>€299,99 </td>
-                    <td>15</td>
-                    <td> <img src="img/immagini-index/FPGA.jpeg" width="100" alt="FPGA"/> </td>
-                </tr>
-                <tr>
-                    <td>Oscilloscopio da banco </td>
-                    <td>Oscilloscopio di archiviazione digitale da banco a 2 canali TBS1072C, 70 MHz </td>
-                    <td>LabVIEW</td>
-                    <td>€1019,99 </td>
-                    <td>5</td>
-                    <td> <img src="img/immagini-index/Osc_2.jpg" width="100" alt="Oscilloscopio"/> </td>
-                </tr>
-                <tr>
-                    <td>Router 4300 series </td>
-                    <td>Un router professionale ideale per reti aziendali, con servizi integrati </td>
-                    <td>Prompt dei comandi in base al sistema operativo</td>
-                    <td>€399,99 </td>
-                    <td>28</td>
-                    <td> <img src="img/immagini-index/router.jpg" width="100" alt="Router"/> </td>
-                </tr>
-                <tr>
-                    <td>Arduino Uno </td>
-                    <td>Un microcontrollore programabile tramite codice Arduino per l'utilizzio di LED e sensori. </td>
-                    <td>Arduino</td>
-                    <td>€29,99 </td>
-                    <td>267</td>
-                    <td> <img src="img/immagini-index/arduino.jpeg" width="100" alt="Arduino"/> </td>
-                </tr>
-                </table>
+                <h3>Welcome to DIEE Account</h3>
             </article>
+            <section>
+                <h3>Accedi all'area riservata del DIEE Tech.</h3>
+                <form action="login" method="POST">
+                    <label for="e-mail">E-mail</label>
+                    <input type="text" name="e-mail" id="e-mail">
+            
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+            
+                    <input type="submit" value="Accedi">
+                </form>
+                <p>
+                    Non hai ancora un account? <a href="#registrazione">Registrati ora</a>
+                </p>
+            </section>      
+        <hr>
+        <br>
+        <section>
+                <h3 id="registrazione">Welcome to DIEE Registration</h3>
+                
+                <p>Compila il form per registrarti:</P>
+            <form>
+                <label for="regname">Nome</label>
+                <input type="text" id="regname" placeholder="Mario" name="name">
+                <br>
+                <label for="regsurname">Cognome</label>
+                <input type="text" id="regsurname" placeholder="Rossi" name="surname">
+                <br>
+                <label for="rege-mail">E-mail</label>
+                <input type="email" id="rege-mail" placeholder="...@gmail.com" name="e-mail">
+                <br>
+                <label for="regpassword">Password</label>
+                <input type="password" id="regpassword" placeholder="password" name="password">
+                <br>
+                <label for="psw-repeat">Ripetere la password</label>
+                <input type="password" placeholder="password" name="psw-repeat" id="psw-repeat">
+                <br>
+                <button type="submit">Registrati</button>
+                <br>
+                <br>
+                <p>Registrandosi a questo sito si accettano tutte le informative<br> sulla privacy
+                <a href="https://www.youtube.com/watch?v=O7Jbryr5XSs" target="_blank">presenti qui</a>.<br>
+                </p>
+            </form>
+        </section>
         </main>
         <aside>
             <h3>Our tools are used all over the world in some of the best-known companies.</h3>
@@ -121,5 +121,5 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </ul>
             <br>
         </footer>
-    </body>
-</html>
+    </body> 
+</html>    
