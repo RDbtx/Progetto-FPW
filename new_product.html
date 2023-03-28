@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head>
         <title>DIEE Tech - Insert</title>
-        <link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen">
+        <!--link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen"-->
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Diee Tech Group">
         <meta name="description" content="Sito per sviluppo di nuove tecnologie">
@@ -17,140 +17,62 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <header>
+            <a href="index.html"><img src="img/DT_no-bk_nav.png" width="100" height="100" alt="Logo DIEE Tech"/></a>
+            <h1>DIEE TECH <small>DIEEDACI TECHNOLOGIES</small></h1>
+        </header> 
         <nav>
-            <a href="index.html"><img class="logo" src="img/DT_bk.png" width="150" height="150" alt="Logo DIEE Tech"/></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="store.html">Store</a></li> 
-                <li><b>Inserisci prodotto</b></li> 
+                <li><a href="new_product.html"><b>Inserisci prodotto</b></a></li> 
                 <li><a href="chi_siamo.html">Chi siamo</a></li> 
                 <li><a href="login.html">Login</a></li>
             </ul>
-            <hr> 
         </nav>
-       
-        <header>
-            <p id="diee">DIEE TECH</p>
-            <p id="dieedaci">DIEEDACI TECHNOLOGIES</p>
-            <h4>Inserisci prodotto</h4>
-        </header>
-        
-        
         <main>
-            <i>Pagina dedicata all'aggiornamento del catalogo</i>
-            <br>
-            Qui è possibile <a href="#segnalibro1">aggiornare</a> un prodotto già presente nel catalogo oppure 
-            <a href="#segnalibro2">inserire</a> manualmente un nuovo prodotto non ancora catalogato.
-            <br>
-            <section>
-            <!--PRODOTTI GIÀ PRESENTI NEL CATALOGO-->
-            <form>
-            <a id = "segnalibro1"><h4>Aggiornamento prodotto</h4></a>
+            <h2>Inserisci prodotto</h2>
             
+            <form action="insert" method="POST">
+                <label for ="product_new">Prodotto: </label>
+                <input type = "text" id = "product_new" name = "product"><br>
+                <label for="quantity_new">Quantità:</label>
+                <input type="number" id="quantity_new" name="quantity" min = "1" max ="1000" value = "1"><br>
+                <label for = "program_new">Programma necessario:</label>
+                <input type ="text" id = "program_new" name = "product"><br>
+                <label for="prezzo_new">Prezzo:</label>
+                <input type = "number" id = "prezzo_new" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" ><br>
+                <label for ="description_new">Descrizione:</label>
+                <textarea rows="2" cols="10" name ="description" id ="description_new" required ="required"></textarea><br>
+                <label for ="image_new">Immagine:</label>
+                <input type="file" id = "image_new" name = "image" required="required"><br>
+                <input type="submit">
+            </form>  
             <br>
-            Prodotto: <select name = "product" required="required">
-                        <option value="" selected disabled hidden>Nessun prodotto selezionato</option>
-                        <option value ="FPGA Artix 7">FPGA Artix 7</option>
-                        <option value ="Oscilloscopio da banco">Oscilloscopio da banco</option>
-                        <option value ="Router 4300 series">Router 4300 series</option>
-                        <option value ="Arduino Uno">Arduino Uno</option>
-                      </select>
-            <label for="quantity">Quantità:</label>
-            <input type="number" id="quantity" name="quantity" min = "1" max ="1000" value = "1">
-            <br><br>
-            Programma necessario: <select name = "program" required="required">
-                                    <option value="" selected disabled hidden>Nessun prodotto selezionato</option>
-                                    <option value ="Vivado">Vivado</option>
-                                    <option value ="LabVIEW">LabVIEW</option>
-                                    <option value ="Prompt COmandi">Prompt Comandi</option>
-                                    <option value ="Arduino">Arduino</option>
-                                  </select>
-            <br><br>
-            <label for="prezzo">Prezzo:</label>
-            <input type = "number" id = "prezzo" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" >
-            <br><br>
-            <label for ="description">Descrizione:</label>
-            <textarea rows="2" cols="10" name ="description" id ="description"></textarea>
-            &nbsp;&nbsp;
-            <label for ="image">Immagine:</label>
-            <input type="file" id = "image" name = "image">
-            <br><br>
-            <input type="submit">&nbsp;<input type ="reset">
-            </form>
-            </section>
-            <br><br>
-            
-            <section>
-            <form>
-            <!--PRODOTTI NON PRESENTI NEL CATALOGO-->
-            <a id = "segnalibro2"><h4>Nuovo prodotto</h4></a>
-            
-            <br>
-            <label for ="product_new">Prodotto: </label>
-            <input type = "text" id = "product_new" name = "product">
-            <label for="quantity_new">Quantità:</label>
-            <input type="number" id="quantity_new" name="quantity" min = "1" max ="1000" value = "1">
-            <br><br>
-            <label for = "program_new">Programma necessario:</label>
-            <input type ="text" id = "program_new" name = "product">
-            <br><br>
-            <label for="prezzo_new">Prezzo:</label>
-            <input type = "number" id = "prezzo_new" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" >
-            <br><br>
-            <label for ="description_new">Descrizione:</label>
-            <textarea rows="2" cols="10" name ="description" id ="description_new" required ="required"></textarea>
-            &nbsp;&nbsp;
-            <label for ="image_new">Immagine:</label>
-            <input type="file" id = "image_new" name = "image" required="required">
-            <br><br>
-            <input type="submit">&nbsp;<input type ="reset">
-            </form>
-            </section>  
-            <br><br>
         </main>
+        <hr>
         <aside>
             <h3>Our tools are used all over the world in some of the best-known companies.</h3>
             <ul>
-                <li><img src="img/Logo-Diee.png" alt="DIEE" height="50"></li>
-                <li><img src="img/Logo_Università_di_Cagliari.jpg" alt="UNICA" height="50"></li>
-                <li><img src="img/Logo-PRA.jpg" alt="pra_lab" height="50"></li>
+                <li><img src="img/immagini-index/Logo-Diee.png" alt="DIEE" height="50"></li>
+                <li><img src="img/immagini-index/Logo_Università_di_Cagliari.jpg" alt="UNICA" height="50"></li>
+                <li><img src="img/immagini-index/Logo-PRA.jpg" alt="pra_lab" height="50"></li>
                 <li><img src="img/immagini-index/LF.png" height="35" alt="Logo Forneria"/></li>
                 <li><img src="img/immagini-index/uol-003.png" height="30" alt="Logo Unione Sarda"/></li>
                 <li><img src="img/immagini-index/logo_videolina.png" height="30" alt="Logo Videolina"/></li>
                 <li><img src="img/immagini-index/logo-podda.png" height="50" alt="Logo Podda"/></li>   
             </ul>
-        </aside>
+        </aside>  
+        <hr>
         <footer>
-            <hr>
-            <img src="img\DT_no-bk_W.png" class="logo" height="150" alt="Logo DIEE Tech"/>
-            <ul>
-                <li><p>
-                    <b>DIEE Tech</b>: <br>
-                    <i>Edificio M <br>
-                    Facoltà di Ingegneria <br>
-                    Via Marengo 2, 09123 Cagliari (CA)<br>
-                    <a href="mailto:info@dieetech.it">info@dieetech.it</a><br>
-                    </i>
-                    </p>
-                </li>
-                <li><p>
-                    <b>Contatti:</b><br>
-                    <a href="chi_siamo.html#Amato">Andrea Amato</a><br>
-                    <a href="chi_siamo.html#Deidda">Riccardo Deidda</a><br>
-                    <a href="chi_siamo.html#Vinci">Alessio Vinci</a><br>
-                    <a href="chi_siamo.html#Lecca">Riccardo Lecca</a><br>
-                    </p>
-                </li>
-                <li><p>
-                    <b>E-mail:</b><br>
-                    <a href="mailto:amato@dieetech.it">amato@dieetech.it</a><br>
-                    <a href="mailto:deidda@dieetech.it">deidda@dieetech.it</a><br>
-                    <a href="mailto:vinci@dieetech.it">vinci@dieetech.it</a><br>
-                    <a href="mailto:lecca@dieetech.it">lecca@dieetech.it</a><br>
-                </p>
-                </li>
-            </ul>
-            <br>
+            <p>
+                <b>DIEE Tech</b> <br>
+                   Andrea Amato<br>
+                   Riccardo Deidda<br>
+                   Alessio Vinci<br>
+                   Riccardo Lecca<br>
+                   <a href="mailto:info@dieetech.it">info@dieetech.it</a><br>
+            </p>
         </footer>
     </body>
 </html>

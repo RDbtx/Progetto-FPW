@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head>
         <title>DIEE Tech - Prodotti</title>
-        <link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen">
+        <!--link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen"-->
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Andrea Amato">
         <meta name="description" content="Sito per sviluppo di nuove tecnologie - Lista Prodotti">
@@ -15,111 +15,86 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <header>
+            <a href="index.html"><img src="img/DT_no-bk_nav.png" width="100" height="100" alt="Logo DIEE Tech"/></a>
+            <h1>DIEE TECH <small>DIEEDACI TECHNOLOGIES</small></h1>
+        </header> 
         <nav>
-            <a href="index.html"><img class="logo" src="img/DT_bk.png" width="150" height="150" alt="Logo DIEE Tech"/></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><b>Store</b></li> 
+                <li><a href="store.html"><b>Store</b></a></li> 
                 <li><a href="new_product.html">Inserisci prodotto</a></li> 
                 <li><a href="chi_siamo.html">Chi siamo</a></li> 
                 <li><a href="login.html">Login</a></li>
             </ul>
-            <hr> 
         </nav>
-        <header>
-            <p id="diee">DIEE TECH</p>
-            <p id="dieedaci">DIEEDACI TECHNOLOGIES</p>
-        </header>
         <main>
             <article>
                 <h2>Lista prodotti</h2>
-                <table id="prodotti">
-                <tr>
-                    <th>Nome</th>
-                    <th>Descrizione</th>
-                    <th>Programmi necessari</th>
-                    <th>Prezzo</th>
-                    <th>Quantità disponibili</th>
-                    <th>Immagine</th>
-                </tr>
-                <tr>
-                    <td>FPGA Artix 7 </td>
-                    <td>Una scheda digitale programmabile tramite linguaggio Verilog. </td>
-                    <td>Vivado</td>
-                    <td>€299,99 </td>
-                    <td>15</td>
-                    <td> <img src="img/immagini-index/FPGA.jpeg" width="100" alt="FPGA"/> </td>
-                </tr>
-                <tr>
-                    <td>Oscilloscopio da banco </td>
-                    <td>Oscilloscopio di archiviazione digitale da banco a 2 canali TBS1072C, 70 MHz </td>
-                    <td>LabVIEW</td>
-                    <td>€1019,99 </td>
-                    <td>5</td>
-                    <td> <img src="img/immagini-index/Osc_2.jpg" width="100" alt="Oscilloscopio"/> </td>
-                </tr>
-                <tr>
-                    <td>Router 4300 series </td>
-                    <td>Un router professionale ideale per reti aziendali, con servizi integrati </td>
-                    <td>Prompt dei comandi in base al sistema operativo</td>
-                    <td>€399,99 </td>
-                    <td>28</td>
-                    <td> <img src="img/immagini-index/router.jpg" width="100" alt="Router"/> </td>
-                </tr>
-                <tr>
-                    <td>Arduino Uno </td>
-                    <td>Un microcontrollore programabile tramite codice Arduino per l'utilizzio di LED e sensori. </td>
-                    <td>Arduino</td>
-                    <td>€29,99 </td>
-                    <td>267</td>
-                    <td> <img src="img/immagini-index/arduino.jpeg" width="100" alt="Arduino"/> </td>
-                </tr>
-                </table>
+                <section>
+                    <img src="img/immagini-index/FPGA.jpeg" width="100" alt="FPGA"/>
+                    <h3>FPGA Artix 7</h3>
+                    <p>
+                    Descrizione: Una scheda digitale programmabile tramite linguaggio Verilog.<br>
+                    Programmi necessari: Vivado<br>
+                    Prezzo: €299,99<br>
+                    Quantità disponibili: 15<br>
+                    </p>
+                </section>
+                <section>
+                    <img src="img/immagini-index/Osc_2.jpg" width="100" alt="Oscilloscopio"/>
+                    <h3>Oscilloscopio da banco </h3>
+                    <p>Descrizione: Oscilloscopio di archiviazione digitale da banco a 2 canali TBS1072C, 70 MHz <br>
+                       Programma necessario: LabVIEW<br>
+                       Prezzo: €1019,99 <br>
+                       Quantità disponibili: 5<br>
+                    </p>
+                </section>
+                <section>
+                    <img src="img/immagini-index/router.jpg" width="100" alt="Router"/>
+                    <h3>Router 4300 series </h3>
+                    <p>
+                        Descrizione: Un router professionale ideale per reti aziendali, con servizi integrati <br>
+                        Programmi necessari: Prompt dei comandi in base al sistema operativo<br>
+                        Prezzo: €399,99 <br>
+                        Quantità disponibili: 28<br>
+                    </p>
+                </section>
+                <section>
+                    <img src="img/immagini-index/arduino.jpeg" width="100" alt="Arduino"/>
+                    <h3>Arduino Uno </h3>
+                    <p>
+                        Un microcontrollore programabile tramite codice Arduino per l'utilizzio di LED e sensori. <br>
+                        Programmi necessari: Arduino<br>
+                        Prezzo: €29,99 <br>
+                        Quantità disponibili: 267<br>
+                    </p>
+                </section>
             </article>
         </main>
+        <hr>
         <aside>
             <h3>Our tools are used all over the world in some of the best-known companies.</h3>
             <ul>
-                <li><img src="img/Logo-Diee.png" alt="DIEE" height="50"></li>
-                <li><img src="img/Logo_Università_di_Cagliari.jpg" alt="UNICA" height="50"></li>
-                <li><img src="img/Logo-PRA.jpg" alt="pra_lab" height="50"></li>
+                <li><img src="img/immagini-index/Logo-Diee.png" alt="DIEE" height="50"></li>
+                <li><img src="img/immagini-index/Logo_Università_di_Cagliari.jpg" alt="UNICA" height="50"></li>
+                <li><img src="img/immagini-index/Logo-PRA.jpg" alt="pra_lab" height="50"></li>
                 <li><img src="img/immagini-index/LF.png" height="35" alt="Logo Forneria"/></li>
                 <li><img src="img/immagini-index/uol-003.png" height="30" alt="Logo Unione Sarda"/></li>
                 <li><img src="img/immagini-index/logo_videolina.png" height="30" alt="Logo Videolina"/></li>
                 <li><img src="img/immagini-index/logo-podda.png" height="50" alt="Logo Podda"/></li>   
             </ul>
         </aside>
+        <hr>
         <footer>
-            <hr>
-            <img src="img\DT_no-bk_W.png" class="logo" height="150" alt="Logo DIEE Tech"/>
-            <ul>
-                <li><p>
-                    <b>DIEE Tech</b>: <br>
-                    <i>Edificio M <br>
-                    Facoltà di Ingegneria <br>
-                    Via Marengo 2, 09123 Cagliari (CA)<br>
-                    <a href="mailto:info@dieetech.it">info@dieetech.it</a><br>
-                    </i>
-                    </p>
-                </li>
-                <li><p>
-                    <b>Contatti:</b><br>
-                    <a href="chi_siamo.html#Amato">Andrea Amato</a><br>
-                    <a href="chi_siamo.html#Deidda">Riccardo Deidda</a><br>
-                    <a href="chi_siamo.html#Vinci">Alessio Vinci</a><br>
-                    <a href="chi_siamo.html#Lecca">Riccardo Lecca</a><br>
-                    </p>
-                </li>
-                <li><p>
-                    <b>E-mail:</b><br>
-                    <a href="mailto:amato@dieetech.it">amato@dieetech.it</a><br>
-                    <a href="mailto:deidda@dieetech.it">deidda@dieetech.it</a><br>
-                    <a href="mailto:vinci@dieetech.it">vinci@dieetech.it</a><br>
-                    <a href="mailto:lecca@dieetech.it">lecca@dieetech.it</a><br>
-                </p>
-                </li>
-            </ul>
-            <br>
+            <p>
+                <b>DIEE Tech</b> <br>
+                   Andrea Amato<br>
+                   Riccardo Deidda<br>
+                   Alessio Vinci<br>
+                   Riccardo Lecca<br>
+                   <a href="mailto:info@dieetech.it">info@dieetech.it</a><br>
+            </p>
         </footer>
     </body>
 </html>
