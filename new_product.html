@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Insert</title>
+        <meta name="author" content="Diee Tech Group">
+        <meta name="description" content="Sito per sviluppo di nuove tecnologie">
+        <meta name="keywords" content="DIEE, technologies, web, internet, windows, 
+              android, mac, store, router, fpga, arduino, microcontrollore, oscilloscopio"> 
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <nav>
+            <a href="index.html"><img src="img/DT_bk.png" style="float:left" width="150" height="150" alt="Logo DIEE Tech"/></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li> 
+                <li><a href="new_product.html"><b>Inserisci prodotto</b></a></li> 
+                <li><a href="chi_siamo.html">Chi siamo</a></li> 
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <hr> 
+        </nav>
+        <hr>
+        
+        <header>    
+            <h1>DIEE TECH<br><small>Dieedaci Technologies</small></h1>
+            
+        </header>
+        <i>Aggiornamento del catalogo</i>
+        <br>
+        
+        <br>
+        <main>
+            <section>
+            <form>
+            <!--PRODOTTI NON PRESENTI NEL CATALOGO-->
+            <a id = "segnalibro2"><h4>Nuovo prodotto</h4></a>
+            
+            <label for ="product">Prodotto: *</label>
+            <input type = "text" id = "product" name = "product" required = "required">
+            <label for="quantity">Quantità: *</label>
+            <input type="number" id="quantity" name="quantity" min = "1" max ="1000" value = "1">
+            <br><br>
+            <label for = "program">Programma necessario:</label>
+            <input type ="text" id = "program" name = "product">
+            <br><br>
+            <label for="prezzo">Prezzo: *</label>
+            <input type = "number" id = "prezzo" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" >
+            <br><br>
+            <label for ="description">Descrizione: *</label>
+            <textarea rows="2" cols="10" name ="description" id ="description" required ="required"></textarea>
+            &nbsp;&nbsp;
+            <label for ="image">Immagine: *</label>
+            <input type="file" id = "image" name = "image" required="required">
+            <br><br>
+            <i>(<b>Attenzione:</b> I campi obbligatori sono contrassegnati con <b>"*"</b>, accertasi di averli compilati tutti)</i>
+            <br><br>
+            <input type="submit">&nbsp;<input type ="reset">
+            </form>
+            </section>  
+            <br><br>
+            
+            
+        </main>
+        
+        
+       
+           <!--banner pubblicitario
+           <aside>
+           <a href="" ><img src="" width="150" height="150" alt="banner pubblicitario"/></a>
+           </aside>
+           -->
+        
+         <footer>
+            <hr>
+            <img src="img\DT_no-bk_W.png" style="float:left; margin-bottom: 0px" height="150" alt="Logo DIEE Tech"/>
+            <p style="float: left;margin-top: 25px; margin-right: 150px">
+            <b>DIEE Tech</b>: <br>
+            <i>Edificio M <br>
+                Facoltà di Ingegneria <br>
+                Via Marengo 2, 09123 Cagliari (CA)
+            </i>
+            </p>
+            <p style="float: left; margin-top: 17px; margin-right: 150px">
+                <b>Contatti:</b><br>
+                <a href="chi_siamo.html#Amato">Andrea Amato</a><br>
+                <a href="chi_siamo.html#Deidda">Riccardo Deidda</a><br>
+                <a href="chi_siamo.html#Vinci">Alessio Vinci</a><br>
+                <a href="chi_siamo.html#Lecca">Riccardo Lecca</a><br>
+            </p>
+            <p style="margin-top: 25px">
+                <b>E-mail:</b><br>
+                <a href="mailto:amato@dieetech.it">amato@dieetech.it</a><br>
+                <a href="mailto:deidda@dieetech.it">deidda@dieetech.it</a><br>
+                <a href="mailto:vinci@dieetech.it">vinci@dieetech.it</a><br>
+                <a href="mailto:lecca@dieetech.it">lecca@dieetech.it</a><br>
+            </p>
+            <br>
+        </footer>
+        
+    </body>
+</html>
