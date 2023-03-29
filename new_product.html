@@ -5,7 +5,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 -->
 <html>
     <head>
-        <title>Insert</title>
+        <title>DIEE Tech - Insert</title>
+        <!--link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen"-->
+        <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Diee Tech Group">
         <meta name="description" content="Sito per sviluppo di nuove tecnologie">
         <meta name="keywords" content="DIEE, technologies, web, internet, windows, 
@@ -15,8 +17,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
+        <header>
+            <a href="index.html"><img src="img/DT_no-bk_nav.png" width="100" height="100" alt="Logo DIEE Tech"/></a>
+            <h1>DIEE TECH <small>DIEEDACI TECHNOLOGIES</small></h1>
+        </header> 
         <nav>
-            <a href="index.html"><img src="img/DT_bk.png" style="float:left" width="150" height="150" alt="Logo DIEE Tech"/></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="store.html">Store</a></li> 
@@ -24,85 +29,50 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <li><a href="chi_siamo.html">Chi siamo</a></li> 
                 <li><a href="login.html">Login</a></li>
             </ul>
-            <hr> 
         </nav>
-        <hr>
-        
-        <header>    
-            <h1>DIEE TECH<br><small>Dieedaci Technologies</small></h1>
-            
-        </header>
-        <i>Aggiornamento del catalogo</i>
-        <br>
-        
-        <br>
         <main>
-            <section>
-            <form>
-            <!--PRODOTTI NON PRESENTI NEL CATALOGO-->
-            <a id = "segnalibro2"><h4>Nuovo prodotto</h4></a>
+            <h2>Inserisci prodotto</h2>
             
-            <label for ="product">Prodotto: *</label>
-            <input type = "text" id = "product" name = "product" required = "required">
-            <label for="quantity">Quantità: *</label>
-            <input type="number" id="quantity" name="quantity" min = "1" max ="1000" value = "1">
-            <br><br>
-            <label for = "program">Programma necessario:</label>
-            <input type ="text" id = "program" name = "product">
-            <br><br>
-            <label for="prezzo">Prezzo: *</label>
-            <input type = "number" id = "prezzo" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" >
-            <br><br>
-            <label for ="description">Descrizione: *</label>
-            <textarea rows="2" cols="10" name ="description" id ="description" required ="required"></textarea>
-            &nbsp;&nbsp;
-            <label for ="image">Immagine: *</label>
-            <input type="file" id = "image" name = "image" required="required">
-            <br><br>
-            <i>(<b>Attenzione:</b> I campi obbligatori sono contrassegnati con <b>"*"</b>, accertasi di averli compilati tutti)</i>
-            <br><br>
-            <input type="submit">&nbsp;<input type ="reset">
-            </form>
-            </section>  
-            <br><br>
-            
-            
-        </main>
-        
-        
-       
-           <!--banner pubblicitario
-           <aside>
-           <a href="" ><img src="" width="150" height="150" alt="banner pubblicitario"/></a>
-           </aside>
-           -->
-        
-         <footer>
-            <hr>
-            <img src="img\DT_no-bk_W.png" style="float:left; margin-bottom: 0px" height="150" alt="Logo DIEE Tech"/>
-            <p style="float: left;margin-top: 25px; margin-right: 150px">
-            <b>DIEE Tech</b>: <br>
-            <i>Edificio M <br>
-                Facoltà di Ingegneria <br>
-                Via Marengo 2, 09123 Cagliari (CA)
-            </i>
-            </p>
-            <p style="float: left; margin-top: 17px; margin-right: 150px">
-                <b>Contatti:</b><br>
-                <a href="chi_siamo.html#Amato">Andrea Amato</a><br>
-                <a href="chi_siamo.html#Deidda">Riccardo Deidda</a><br>
-                <a href="chi_siamo.html#Vinci">Alessio Vinci</a><br>
-                <a href="chi_siamo.html#Lecca">Riccardo Lecca</a><br>
-            </p>
-            <p style="margin-top: 25px">
-                <b>E-mail:</b><br>
-                <a href="mailto:amato@dieetech.it">amato@dieetech.it</a><br>
-                <a href="mailto:deidda@dieetech.it">deidda@dieetech.it</a><br>
-                <a href="mailto:vinci@dieetech.it">vinci@dieetech.it</a><br>
-                <a href="mailto:lecca@dieetech.it">lecca@dieetech.it</a><br>
-            </p>
+            <form action="insert" method="POST">
+                <label for ="product_new">Prodotto: </label>
+                <input type = "text" id = "product_new" name = "product"><br>
+                <label for="quantity_new">Quantità:</label>
+                <input type="number" id="quantity_new" name="quantity" min = "1" max ="1000" value = "1"><br>
+                <label for = "program_new">Programma necessario:</label>
+                <input type ="text" id = "program_new" name = "product"><br>
+                <label for="prezzo_new">Prezzo:</label>
+                <input type = "number" id = "prezzo_new" name = "prezzo" min ="0.00" step ="0.1" required="required" value ="0.00" ><br>
+                <label for ="description_new">Descrizione:</label>
+                <textarea rows="2" cols="10" name ="description" id ="description_new" required ="required"></textarea><br>
+                <label for ="image_new">Immagine:</label>
+                <input type="file" id = "image_new" name = "image" required="required"><br>
+                <input type="submit">
+            </form>  
             <br>
+        </main>
+        <hr>
+        <aside>
+            <h3>Our tools are used all over the world in some of the best-known companies.</h3>
+            <ul>
+                <li><img src="img/immagini-index/Logo-Diee.png" alt="DIEE" height="50"></li>
+                <li><img src="img/immagini-index/Logo_Università_di_Cagliari.jpg" alt="UNICA" height="50"></li>
+                <li><img src="img/immagini-index/Logo-PRA.jpg" alt="pra_lab" height="50"></li>
+                <li><img src="img/immagini-index/LF.png" height="35" alt="Logo Forneria"/></li>
+                <li><img src="img/immagini-index/uol-003.png" height="30" alt="Logo Unione Sarda"/></li>
+                <li><img src="img/immagini-index/logo_videolina.png" height="30" alt="Logo Videolina"/></li>
+                <li><img src="img/immagini-index/logo-podda.png" height="50" alt="Logo Podda"/></li>   
+            </ul>
+        </aside>  
+        <hr>
+        <footer>
+            <p>
+                <b>DIEE Tech</b> <br>
+                   Andrea Amato<br>
+                   Riccardo Deidda<br>
+                   Alessio Vinci<br>
+                   Riccardo Lecca<br>
+                   <a href="mailto:info@dieetech.it">info@dieetech.it</a><br>
+            </p>
         </footer>
-        
     </body>
 </html>
