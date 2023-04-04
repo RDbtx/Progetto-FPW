@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head>
         <title>DIEE Tech - Prodotti</title>
-        <!--link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen"-->
+        <link type="text/css" rel="stylesheet" href="testcss.css" media="screen">
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Andrea Amato">
         <meta name="description" content="Sito per sviluppo di nuove tecnologie - Lista Prodotti">
@@ -28,10 +28,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
-        <main>
+        <main class="col-9">
             <article>
                 <h2>Lista prodotti</h2>
-                <section>
+                <section class="product">
                     <img src="img/immagini-index/FPGA.jpeg" width="100" alt="FPGA"/>
                     <h3>FPGA Artix 7</h3>
                     <p>
@@ -41,7 +41,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     Quantità disponibili: 15<br>
                     </p>
                 </section>
-                <section>
+                <section class="product">
                     <img src="img/immagini-index/Osc_2.jpg" width="100" alt="Oscilloscopio"/>
                     <h3>Oscilloscopio da banco </h3>
                     <p>Descrizione: Oscilloscopio di archiviazione digitale da banco a 2 canali TBS1072C, 70 MHz <br>
@@ -50,7 +50,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                        Quantità disponibili: 5<br>
                     </p>
                 </section>
-                <section>
+                <section class="product">
                     <img src="img/immagini-index/router.jpg" width="100" alt="Router"/>
                     <h3>Router 4300 series </h3>
                     <p>
@@ -60,11 +60,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                         Quantità disponibili: 28<br>
                     </p>
                 </section>
-                <section>
+                <section class="product">
                     <img src="img/immagini-index/arduino.jpeg" width="100" alt="Arduino"/>
                     <h3>Arduino Uno </h3>
                     <p>
-                        Un microcontrollore programabile tramite codice Arduino per l'utilizzio di LED e sensori. <br>
+                        Un microcontrollore programabile tramite codice Arduino per l'utilizzo di LED e sensori. <br>
                         Programmi necessari: Arduino<br>
                         Prezzo: €29,99 <br>
                         Quantità disponibili: 267<br>
@@ -72,21 +72,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 </section>
             </article>
         </main>
-        <hr>
-        <aside>
-            <h3>Our tools are used all over the world in some of the best-known companies.</h3>
-            <ul>
-                <li><img src="img/immagini-index/Logo-Diee.png" alt="DIEE" height="50"></li>
-                <li><img src="img/immagini-index/Logo_Università_di_Cagliari.jpg" alt="UNICA" height="50"></li>
-                <li><img src="img/immagini-index/Logo-PRA.jpg" alt="pra_lab" height="50"></li>
-                <li><img src="img/immagini-index/LF.png" height="35" alt="Logo Forneria"/></li>
-                <li><img src="img/immagini-index/uol-003.png" height="30" alt="Logo Unione Sarda"/></li>
-                <li><img src="img/immagini-index/logo_videolina.png" height="30" alt="Logo Videolina"/></li>
-                <li><img src="img/immagini-index/logo-podda.png" height="50" alt="Logo Podda"/></li>   
-            </ul>
+        <aside class="col-3">
+            <img src="img/Pubblicità sito.png" height="300" alt="Ads pubblicità"/>
         </aside>
-        <hr>
-        <footer>
+        <footer class="col-12">
             <p>
                 <b>DIEE Tech</b> <br>
                    Andrea Amato<br>
