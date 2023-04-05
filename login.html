@@ -2,7 +2,7 @@
 
     <head>
         <title>DIEE Tech - Login</title>
-        <!--link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen"-->
+        <link type="text/css" rel="stylesheet" href="testcss.css" media="screen">
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Diee Tech Group">
         <meta name="description" content="Sito per sviluppo di nuove tecnologie e vendita di supporti per aziende
@@ -25,28 +25,29 @@
                 <li><b>Login</b></li>
             </ul>
         </nav>
-        <main>
-            <article>
-                <h2>Welcome back to DIEE Account</h2>
-            </article>
-            <section>
+        <main class="col-9">
+            
+            <h2 class="login-reg-title">Welcome back to DIEE Account</h2>
+           
+            <section id="login">
                 <h3>Accedi all'area riservata del DIEE Tech.</h3>
                 <form action="login" method="POST">
-                    <label for="e-mail">E-mail</label>
-                    <input type="text" name="e-mail" id="e-mail">
-            
+                    <label  for="e-mail">E-mail</label>
+                    <input  type="text" name="e-mail" id="e-mail">
+                    <br>
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password">
-            
+                    <br>
                     <input type="submit" value="Accedi">
                 </form>
             </section>      
-        <hr>
+        
         <br>
-        <section>
-                <h2 id="registrazione">Welcome to DIEE Registration</h2>
-                <p>Compila il form per registrarti:</P>
+        
+        <h2 class="login-reg-title">Welcome to DIEE Registration</h2>
+        <section id="registration">
             <form>
+                <h3>Compila il form per registrarti:</h3>
                 <label for="regname">Nome</label>
                 <input type="text" id="regname" placeholder="Mario" name="name">
                 <br>
@@ -62,14 +63,15 @@
                 <label for="psw-repeat">Ripetere la password</label>
                 <input type="password" placeholder="password" name="psw-repeat" id="psw-repeat">
                 <br>
-                <button type="submit">Registrati</button>
+                <input type="submit" value="Registrati">
                 <br>
                 <br>
             </form>
         </section>
-        </main>
-        <hr>
-        <aside>
+        
+  
+   
+        <section>
             <h3>Our tools are used all over the world in some of the best-known companies.</h3>
             <ul>
                 <li><img src="img/immagini-index/Logo-Diee.png" alt="DIEE" height="50"></li>
@@ -80,9 +82,17 @@
                 <li><img src="img/immagini-index/logo_videolina.png" height="30" alt="Logo Videolina"/></li>
                 <li><img src="img/immagini-index/logo-podda.png" height="50" alt="Logo Podda"/></li>   
             </ul>
-        </aside>  
-        <hr>
-        <footer>
+        </section>
+        </main>
+        
+        
+        
+        <aside class="col-3">
+        <img src="img/Pubblicità sito.png" height="300" alt="Ads pubblicità"/>    
+        </aside>
+        
+        
+        <footer class="col-12">
             <p>
                 <b>DIEE Tech</b> <br>
                    Andrea Amato<br>
