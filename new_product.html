@@ -6,7 +6,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
 <html>
     <head>
         <title>DIEE Tech - Insert</title>
-        <!--link type="text/css" rel="stylesheet" href="css/dieecss.css" media="screen"-->
+        <link type="text/css" rel="stylesheet" href="testcss.css" media="screen">
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="author" content="Diee Tech Group">
         <meta name="description" content="Sito per sviluppo di nuove tecnologie">
@@ -30,28 +30,33 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <li><a href="login.html">Login</a></li>
             </ul>
         </nav>
-        <main>
-            <h2>Inserisci prodotto</h2>
-            
+        <main class="col-9">    
+            <section id="product_new" >
+                <h2>Inserisci prodotto</h2>
             <form action="insert" method="POST">
-                <label for ="product_new">Prodotto: </label>
-                <input type = "text" id = "product_new" name = "product"><br>
-                <label for="quantity_new">Quantità:</label>
-                <input type="number" id="quantity_new" name="quantity" min = "1" max ="1000" value = "1"><br>
-                <label for = "program_new">Programma necessario:</label>
-                <input type ="text" id = "program_new" name = "product"><br>
-                <label for="prezzo_new">Prezzo:</label>
-                <input type = "number" id = "prezzo_new" name = "prezzo" min ="0.00" step ="0.1"  value ="0.00" ><br>
-                <label for ="description_new">Descrizione:</label>
-                <textarea rows="2" cols="10" name ="description" id ="description_new" ></textarea><br>
-                <label for ="image_new">Immagine:</label>
-                <input type="file" id = "image_new" name = "image"><br>
+                <label for ="product_p">Prodotto: </label>
+                <input type = "text" id = "product_p" name = "product_p"><br>
+                <label for="quantity_p">Quantità:</label>
+                <input type="number" id="quantity_p" name="quantity_p" min = "1" max ="1000" value = "1"><br>
+                <label for = "program_p">Software:</label>
+                <input type ="text" id = "software_p" name = "product_s"><br>
+                <label for="prezzo_p">Prezzo:</label>
+                <input type = "number" id = "prezzo_p" name = "prezzo" min ="0.00" step ="0.1"  value ="0.00" ><br>
+                <label for ="image_p">Immagine:</label>
+                <input type="file" id = "image_p" name = "image_p"><br>
+                <label for ="description_p">Descrizione:</label>
+                <textarea rows="2" cols="10" name ="description_p" id ="description_p" ></textarea><br>
                 <input type="submit">
-            </form>  
-            <br>
+            </form>
+            </section>    
+            
         </main>
-        <hr>
-        <aside>
+        
+        <aside class="col-3">
+            <img src="img/Pubblicità sito.png" height="300" alt="Ads pubblicità"/>    
+        </aside>
+        
+        <section id ="sponsor" class = "col-12">
             <h3>Our tools are used all over the world in some of the best-known companies.</h3>
             <ul>
                 <li><img src="img/immagini-index/Logo-Diee.png" alt="DIEE" height="50"></li>
@@ -62,9 +67,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <li><img src="img/immagini-index/logo_videolina.png" height="30" alt="Logo Videolina"/></li>
                 <li><img src="img/immagini-index/logo-podda.png" height="50" alt="Logo Podda"/></li>   
             </ul>
-        </aside>  
-        <hr>
-        <footer>
+        </section>  
+        
+
+        <footer class="col-12">
             <p>
                 <b>DIEE Tech</b> <br>
                    Andrea Amato<br>
@@ -74,5 +80,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                    <a href="mailto:info@dieetech.it">info@dieetech.it</a><br>
             </p>
         </footer>
+        
+        
     </body>
+    
+   
 </html>
