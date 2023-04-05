@@ -145,7 +145,7 @@ footer{
 }
 
 
-
+/*css_pagina di login*/
 
 .login-reg-title{
     margin-top:50px
@@ -223,3 +223,5 @@ footer{
 #registration #regsurname{
     transform:translateX(40px);
 }
+
+
