@@ -97,7 +97,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
         padding-right: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
-    } 
+    }
+    /*NEW_PRODUCT.HTML*/
+     #product_new #description_p{
+        transform: translateX(2%);
+    }
 }
 
 @font-face {
@@ -250,7 +254,7 @@ aside li{
 
 /*NEW_PRODUCT.HTML*/
 
-#product{
+#product_new{
     position:relative;
     background: grey;
     padding:20px;
@@ -263,31 +267,31 @@ aside li{
     height: auto;
 }
 
-#product input{
+#product_new input{
     width:50%;
     margin-left: 15px;
     margin-top: 15px;
 }
 
-#product input[type = "submit"]{
+#product_new input[type = "submit"]{
     width:40%;
     margin-top:10px;   
 }
 
-#product #prezzo_p{
+#product_new #prezzo_p{
     margin-left:24px;
     text-align:right;
 }
 
-#product #software_p{
+#product_new #software_p{
     margin-left:12px;
 }
 
-#product #quantity_p{
+#product_new #quantity_p{
     text-align:right;
 }
 
-#product #description_p{
-    margin-right:35%;
-    margin-top:10px;
+#product_new #description_p{
+    margin-right:40%;
+    margin-top:2%;
 }
