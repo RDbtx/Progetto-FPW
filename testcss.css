@@ -143,3 +143,83 @@ main{
 footer{
     background: #27282c;
 }
+
+
+
+
+.login-reg-title{
+    margin-top:50px
+}
+
+#login {
+    text-align: center;
+    background:gray;
+    color: #000000;
+    margin-left:15px;
+    padding: 15px;
+   
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: auto;
+    width:45%;
+}
+
+#login input{
+    width:40%;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#login #e-mail{
+    transform: translateX(13px);
+}
+
+#login input[type="submit"]{
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#registration {
+    text-align: center;
+    background:gray;
+    color: #000000;
+    margin-left:15px;
+    padding: 15px;
+   
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: auto;
+    width:60%;
+}
+
+
+#registration input{
+    width:40%;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+
+#registration input[type="submit"]{
+    width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+#registration #regname{
+    transform:translateX(54px);
+}
+
+#registration #regpassword{
+    transform:translateX(40px);
+}
+
+#registration #rege-mail{
+    transform:translateX(53px)
+}
+
+#registration #regsurname{
+    transform:translateX(40px);
+}
