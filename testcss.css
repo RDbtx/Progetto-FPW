@@ -248,4 +248,46 @@ aside li{
     transform:translateX(40px);
 }
 
+/*NEW_PRODUCT.HTML*/
 
+#product{
+    position:relative;
+    background: grey;
+    padding:20px;
+    margin: 80px;
+    text-align: center;
+    border-radius: 20px;
+    left:20px;
+    top:30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: auto;
+}
+
+#product input{
+    width:50%;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#product input[type = "submit"]{
+    width:40%;
+    margin-top:10px;   
+}
+
+#product #prezzo_p{
+    margin-left:24px;
+    text-align:right;
+}
+
+#product #software_p{
+    margin-left:12px;
+}
+
+#product #quantity_p{
+    text-align:right;
+}
+
+#product #description_p{
+    margin-right:35%;
+    margin-top:10px;
+}
