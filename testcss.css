@@ -59,15 +59,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     }
     #login {
     width:50%;
-    transform:translateX(50%);
     }
     #registration {
     width:50%;
-    transform:translateX(50%);
     }
-    #product_new {
-    width:50%;
-    transform:translateX(50%);
+    /*New product*/
+    #product_new{
+        margin-left: 35%;
+        margin-right: 35%;
     }
 }
 
@@ -101,11 +100,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
         padding-right: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
-    }
-    /*NEW_PRODUCT.HTML*/
-     #product_new #description_p{
-        transform: translateX(2%);
-    }
+    } 
 }
 
 @font-face {
@@ -185,8 +180,7 @@ aside li{
 
 #login {
     text-align: center;
-    background: rgb(31,23,156);
-    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    background:gray;
     color: #FFFFFF;
     margin-left:15px;
     margin-right:15px;
@@ -217,8 +211,7 @@ aside li{
 
 #registration {
     text-align: center;
-    background: rgb(31,23,156);
-    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    background:gray;
     color: white;
     margin-left:15px;
     margin-right:15px;
@@ -253,14 +246,10 @@ aside li{
 
 #product_new{
     position:relative;
-    background: rgb(31,23,156);
-    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    background: grey;
     padding:20px;
-    margin: 80px;
     text-align: center;
     border-radius: 20px;
-    left:20px;
-    top:30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     height: auto;
 }
@@ -295,3 +284,4 @@ aside li{
     width:80%;
     height:200px;
 }
+
