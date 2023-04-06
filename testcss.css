@@ -65,6 +65,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     width:50%;
     transform:translateX(50%);
     }
+    #product_new {
+    width:50%;
+    transform:translateX(50%);
+    }
 }
 
 .col-1 {width:8.33%;}
@@ -192,19 +196,21 @@ aside li{
     height: auto;
 }
 
-#login input{
-    width:40%;
-    margin-left: 15px;
-    margin-top: 15px;
+#login label{
+    display:block;
+    margin-top:10px;
 }
 
-#login #e-mail{
-    transform: translateX(13px);
+
+#login input{
+    width:40%;
+    margin-top: 10px;
 }
+
 
 #login input[type="submit"]{
     width: 40%;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
@@ -222,35 +228,24 @@ aside li{
 }
 
 
+#registration label{
+    display:block;
+    margin-top:10px;
+}
+
 #registration input{
     width:40%;
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 
 #registration input[type="submit"]{
     width: 40%;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
 
 
-#registration #regname{
-    transform:translateX(54px);
-}
-
-#registration #regpassword{
-    transform:translateX(40px);
-}
-
-#registration #rege-mail{
-    transform:translateX(53px)
-}
-
-#registration #regsurname{
-    transform:translateX(40px);
-}
 
 /*NEW_PRODUCT.HTML*/
 
@@ -267,10 +262,15 @@ aside li{
     height: auto;
 }
 
+
+#product_new label{
+    display: block;
+    margin-top:10px
+}
+
 #product_new input{
     width:50%;
-    margin-left: 15px;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 #product_new input[type = "submit"]{
@@ -279,19 +279,16 @@ aside li{
 }
 
 #product_new #prezzo_p{
-    margin-left:3.5%;
     text-align:right;
 }
 
-#product_new #software_p{
-    margin-left:1.5%;
-}
 
 #product_new #quantity_p{
     text-align:right;
 }
 
-#product_new #description_p{
-    margin-right:34%;
-    margin-top:2%;
+#product_new textarea{
+    resize:none;
+    width:80%;
+    height:200px;
 }
