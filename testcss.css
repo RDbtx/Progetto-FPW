@@ -19,17 +19,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     float: left;
     padding: 10px;
     }
-    header img{
+    header img{              /*Logo sito desktop*/
     float:left;
     margin-right: 10px;
+    margin-left: 10px;
     }
-    h1{
+    h1{                      /*Titolo sito*/
     padding: 47px;
     font-size: 35px;
     letter-spacing: 0.51px;
     line-height: 0.14px;
     }
-    nav{
+    nav{                     /*Menù*/
     background: #0d1117;    
     position: sticky;
     top: 0;
@@ -47,15 +48,29 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     nav li:last-child{
         border-right: 0px solid #000000;
     }
-    #sponsor ul li{
+    #sponsor ul li{         /*Lista loghi index*/ 
     display: inline;
     list-style-type: none;
     margin-left: 15px;
     padding: 10px;
     }
-    .product img{     /*Store*/
+    #unione{                /*Regolazione loghi*/
+        margin-bottom: 8px;
+    }
+    #videolina{
+        margin-bottom: 5px;
+    }
+    #podda{
+        margin-top: 10px;
+    }
+    .product img{           /*Store*/
     float:right;
     padding-top: 10px;
+    }
+    .person img{            /*Chi siamo*/
+        float: left;
+        margin-top: 20px;
+        padding-right: 2%;
     }
     #login {
     width:50%;
@@ -65,7 +80,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     width:50%;
     margin-left: 25%;
     }
-    /*New product*/
+                            /*New product*/
     #product_new{
     width: 30%;
     margin-left: 35%;
@@ -136,7 +151,7 @@ a:visited{
     color: white;
 }
 
-nav{
+nav{                        /*Menù*/
     text-align: center;    
 }
 nav ul{
@@ -144,7 +159,7 @@ nav ul{
     padding-bottom: 1px;
     padding-top: 1px;
 }
-#sponsor{
+#sponsor{                   /*Lista loghi index*/
     text-align: center;
     background: repeating-linear-gradient(#0d1117,#0d1117, #0d1117, white,white,white,white,white);
 }
@@ -169,17 +184,25 @@ footer p{
     margin: 0px;
     padding: 3%;
 }
-aside{
+aside{                    /*Contenuto secondario*/
     background: white;
     color: black;
     text-align: center;
+    margin-bottom: 0;
+}
+aside ul{
+    padding-left: 0px;
 }
 aside li{
-    text-align: center;
     list-style-type: none;
-    padding: 5px;
+    padding-bottom: 5px;
+    border-top: 1px solid black;
+    padding-top: 10px;
 }
-.clear{
+aside li:last-child{
+    margin: 0px;
+}
+.clear{                     /*Div per evitare sovrapposizioni*/
     clear: both;
 }
 
@@ -287,4 +310,10 @@ aside li{
     resize:none;
     width:80%;
     height:200px;
+}
+/*Chi siamo*/
+.person {
+    border-top: 1px solid #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 1%;
 }
