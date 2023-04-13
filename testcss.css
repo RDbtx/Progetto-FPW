@@ -161,7 +161,7 @@ nav ul{
 }
 #sponsor{                   /*Lista loghi index*/
     text-align: center;
-    background: repeating-linear-gradient(#0d1117,#0d1117, #0d1117, white,white,white,white,white);
+    background: repeating-linear-gradient(#0d1117,#0d1117, #0d1117, white,white,white,white,white,white,white,white,white,white,white,white);
 }
 
 #sponsor ul li{
@@ -207,10 +207,6 @@ aside li:last-child{
 }
 
 /*LOGIN*/
-
-.login-reg-title{
-    margin-top:50px
-}
 
 #login {
     text-align: center;
