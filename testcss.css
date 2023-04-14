@@ -171,7 +171,7 @@ nav ul{
 }
 #sponsor{                   /*Lista loghi index*/
     text-align: center;
-    background: linear-gradient(#0d1117 14%,white 25%);
+    background: linear-gradient(#0d1117 25%,white 50%);
 }
 
 #sponsor ul li{
