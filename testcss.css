@@ -48,6 +48,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     nav li:last-child{
         border-right: 0px solid #000000;
     }
+    #sezione-news ul{       /*Sezione news in index*/
+        display: inline-flex;
+    }
+    #sezione-news li{
+        padding-right: 20px;
+    }
+    .notizia{
+        width: 90%;
+        height: 100%;
+    }
     #sponsor ul li{         /*Lista loghi index*/ 
     display: inline;
     list-style-type: none;
@@ -173,6 +183,22 @@ nav ul{
     padding-top: 10px;
     padding-bottom: 15px;
     padding-left: 0px;
+}
+#sezione-news{            /*Sezione news in index*/
+    background: radial-gradient(#c241ff 6.65%,#6b57ff 100%);
+    padding: 10px;
+}
+#sezione-news ul{         /*Sezione news in index*/
+    list-style-type: none;
+    padding-left: 0px;
+}
+.notizia{                 /*Sezione news in index*/  
+    background: white;
+    color: black;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 main{
     margin: 0px;
