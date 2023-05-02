@@ -48,6 +48,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     nav li:last-child{
         border-right: 0px solid #000000;
     }
+    #img-index img {
+        height: 10%;
+        width: 30%;
+    }   
     #sezione-news ul{       /*Sezione news in index*/
         display: inline-flex;
     }
@@ -92,9 +96,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     }
                             /*New product*/
     #product_new{
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 40%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
     }
 }
 
@@ -141,7 +145,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 
 @font-face {
     font-family: Glacial Indifference;
+    font-weight: normal;
     src: url(fonts/glacial-indifference.regular.otf);
+}
+
+@font-face {
+    font-family: Glacial Indifference;
+    font-weight: bold;
+    src: url(fonts/GlacialIndifference-Bold.otf);
 }
 
 body{
@@ -171,7 +182,7 @@ nav ul{
 }
 #sponsor{                   /*Lista loghi index*/
     text-align: center;
-    background: linear-gradient(#0d1117 25%,white 50%);
+    background: linear-gradient(#0d1117 15%,white 35%);
 }
 
 #sponsor ul li{
@@ -183,6 +194,7 @@ nav ul{
     padding-top: 10px;
     padding-bottom: 15px;
     padding-left: 0px;
+    margin-bottom: 0px;
 }
 #sezione-news{            /*Sezione news in index*/
     background: radial-gradient(#c241ff 6.65%,#6b57ff 100%);
@@ -211,8 +223,7 @@ footer p{
     padding: 3%;
 }
 aside{                    /*Contenuto secondario*/
-    background: white;
-    color: black;
+    color: white;
     text-align: center;
     margin-bottom: 0;
 }
@@ -224,6 +235,10 @@ aside li{
     padding-bottom: 5px;
     border-top: 1px solid black;
     padding-top: 10px;
+    margin-bottom: 13%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 aside li:last-child{
     margin: 0px;
