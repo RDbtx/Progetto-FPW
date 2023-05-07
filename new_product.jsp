@@ -35,9 +35,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <label for="quantity_p">Quantità:</label>
                 <input type="number" id="quantity_p" name="quantity_p" min = "1" max ="1000" value = "1"><br>
                 <label for ="software_p">Software:</label>
-                <input type ="text" id = "software_p" name = "product_s"><br>
+                <input type ="text" id = "software_p" name = "software_p"><br>
                 <label for="prezzo_p">Prezzo:</label>
-                <input type = "number" id = "prezzo_p" name = "prezzo" min ="0.00" step ="0.1"  value ="0.00"><br>
+                <input type = "number" id = "prezzo_p" name = "prezzo_p" min ="0.00" step ="0.1"  value ="0.00"><br>
                 <label for ="image_p">Immagine:</label>
                 <input type="file" id = "image_p" name = "image_p"><br>
                 <label for ="description_p">Descrizione:</label>
