@@ -36,8 +36,6 @@ public class Registrazione extends HttpServlet {
     
         response.setContentType("text/html;charset=UTF-8");
         
-        HttpSession session = request.getSession();
-        
         String nome = request.getParameter("name");
         String surname = request.getParameter("surname");
         String email = request.getParameter("e-mail");
@@ -53,15 +51,12 @@ public class Registrazione extends HttpServlet {
             Utils.checkString(email, minUser, maxUser);
             Utils.checkString(password, minUser, maxUser);
             Utils.checkString(pswrepet, minUser, maxUser);
-            //session.setAttribute("lastLogin",Utils.convertTime(session.getLastAccessedTime()));
             response.sendRedirect("utenteRegistrato.jsp");//redirect alla nuova jsp user (areaPersonale)
-            //request.getRequestDispatcher("areaPersonale.jsp").forward(request, response);
+           
       
         } catch(InvalidParamException e){
-            //message =  "Credenziali non valide. " + e.getMessage();
             request.setAttribute("errorMessage",e.getMessage());
-            //request.setAttribute("link","login.jsp" );
-           request.getRequestDispatcher("error.jsp").forward(request, response);
+            request.getRequestDispatcher("error.jsp").forward(request, response);
           
         }
         
