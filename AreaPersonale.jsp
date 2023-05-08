@@ -26,7 +26,7 @@
                    Città: ${citta}<br>
                    Ultimo accesso: ${lastlogin}<br><br>
                    Effettua il logout<br>
-                   <a href="logoutServlet"><button type="button">logout</button></a>
+                   <a href="logoutServlet"><button type="button">Logout</button></a>
                 </p>
             </main>
             <jsp:include page="aside.jsp"/>
