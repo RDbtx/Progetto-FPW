@@ -32,7 +32,8 @@
                 </c:if>
                 <c:if test="${not empty username}">
                 <form action="logout" method="POST">
-                    <label for="logout">Effettua il logout</label>
+                    <h3>Sei autenticato come ${username}</h3>
+                    <p>Effettua il logout</p>
                     <br>
                     <a href="logoutServlet"><button type="button">logout</button></a>
                 </form>
