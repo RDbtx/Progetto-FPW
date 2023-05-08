@@ -38,7 +38,7 @@ public class Registrazione extends HttpServlet {
         
         HttpSession session = request.getSession();
         
-        String nome = request.getParameter("nome");
+        String nome = request.getParameter("name");
         String surname = request.getParameter("surname");
         String email = request.getParameter("e-mail");
         String password = request.getParameter("password");
@@ -49,7 +49,7 @@ public class Registrazione extends HttpServlet {
         
         
         try{
-            Utils.checkString(nome, minUser, maxUser);
+            Utils.checkString(name, minUser, maxUser);
             Utils.checkString(surname, minUser, maxUser);
             Utils.checkString(email, minUser, maxUser);
             Utils.checkString(password, minUser, maxUser);
