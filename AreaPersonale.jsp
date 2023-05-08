@@ -1,8 +1,3 @@
-<%-- 
-    Document   : AreaPersonale
-    Created on : 7 mag 2023, 17:51:46
-    Author     : andre
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -22,11 +17,12 @@
             <jsp:include page="nav.jsp"/>
             <main class="col-8">
                 <h1>Benvenuto ${nome}!</h1>
-                <p>Informazioni personali:
-                   Nome: ${nome}
-                   Cognome: ${username}
-                   E-mail: ${email}
-                   Città: ${citta}
+                <p>Informazioni personali:<br>
+                   Nome: ${nome}<br>
+                   Cognome: ${username}<br>
+                   E-mail: ${email}<br>
+                   Città: ${citta}<br>
+                   Ultimo accesso: ${lastlogin}<br>
                 </p>
             </main>
             <jsp:include page="aside.jsp"/>
