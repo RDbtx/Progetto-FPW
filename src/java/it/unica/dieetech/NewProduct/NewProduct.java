@@ -44,8 +44,8 @@ public class NewProduct extends HttpServlet {
         
         try{
             Utils.checkString(product, 1, 20);
-            Utils.checkInteger(quantity,1,1000 );
-            Utils.checkFloat(price, 1, 1000000);
+            Utils.checkInteger(quantity, 0, 1000 );
+            Utils.checkFloat(price, 0, 1000000);
             Utils.checkString(software, 0, 20);
             Utils.checkString(description, 0, 150);
             
