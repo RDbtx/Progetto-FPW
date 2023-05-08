@@ -13,7 +13,7 @@
             <main class="col-8">
                 <h1>Errore:</h1>
                 <p><h2>${errorMessage}</h2><br>
-                <a href="${webpage}.jsp">Torna al form precedente</a>
+                <a href="${webpage}">Torna al form precedente</a>
                 </p>
             </main>
             <jsp:include page="aside.jsp"/>
