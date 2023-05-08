@@ -18,7 +18,7 @@ public class Utils {
             throw new InvalidParamException("Parametro nullo");
         
         if (param.length() < min || param.length() > max)
-            throw new InvalidParamException("la stringa deve avere una dimensione compresa tra " + min +" e " + max);
+            throw new InvalidParamException("La stringa deve avere una dimensione compresa tra " + min +" e " + max + ".");
         }   //controllo grandezza stringa 
     
     public static void checkInteger(String param, int min , int max) throws InvalidParamException{
@@ -27,7 +27,7 @@ public class Utils {
             int value = Integer.valueOf(param);
             
             if (value < min || value > max)
-                throw new InvalidParamException("la stringa deve avere una dimensione compresa tra " + min +" e " + max);
+                throw new InvalidParamException("La stringa deve avere una dimensione compresa tra " + min +" e " + max+ ".");
             
         } catch(NumberFormatException e){
                 throw new InvalidParamException("la stringa inserita non è un numero");
@@ -40,10 +40,10 @@ public class Utils {
             float value = Float.valueOf(param);
             
             if (value < min || value > max)
-                throw new InvalidParamException("la stringa deve avere una dimensione compresa tra " + min +" e " + max);
+                throw new InvalidParamException("La stringa deve avere una dimensione compresa tra " + min +" e " + max + ".");
             
         } catch(NumberFormatException e){
-                throw new InvalidParamException("la stringa inserita non è un numero");
+                throw new InvalidParamException("La stringa inserita non è un numero.");
         }
     }//controlla i valori del float
     
