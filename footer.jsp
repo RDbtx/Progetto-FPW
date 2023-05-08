@@ -9,6 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link type="text/css" rel="stylesheet" href="testcss.css" media="screen">
+        <link rel="shortcut icon" href="img/DT_bk_W.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>DIEE Tech - Footer</title>
     </head>
     <body>

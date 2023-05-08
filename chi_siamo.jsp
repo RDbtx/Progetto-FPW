@@ -12,7 +12,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="author" content="Andrea Amato">
         <meta name="description" content="Sito per sviluppo di nuove tecnologie">
         <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac">
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
