@@ -50,6 +50,9 @@
                 <label for="psw-repeat">Ripetere la password</label>
                 <input type="password" placeholder="password" name="psw-repeat" id="psw-repeat">
                 <br>
+                <label for="image">Foto profilo</label>
+                <input type="file" accept="image/png, image/jpeg" placeholder="immagine" name="image" id="image">
+                <br>
                 <input type="submit" value="Registrati">
                 <br>
                 <br>
