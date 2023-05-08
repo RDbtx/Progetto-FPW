@@ -1,9 +1,4 @@
-<%-- 
-    Document   : nav
-    Created on : 4 mag 2023, 17:47:15
-    Author     : andre
---%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,10 +10,13 @@
         <nav>
             <ul>
                 <li><a href="index.jsp">Home</a></li>
-                <li><a href="store.jsp">Store</a></li> 
-                <li><a href="new_product.jsp">Inserisci prodotto</a></li> 
+                <li><a href="store.jsp">Store</a></li>
+                <c:if test="${not empty username}">
+                    <li><a href="new_product.jsp">Inserisci prodotto</a></li>
+                </c:if>
                 <li><a href="chi_siamo.jsp">Chi siamo</a></li> 
                 <li><a href="login.jsp">Login</a></li>
+                <li><a href="AreaPersonale.jsp">PROFILO</a></li>
             </ul>
         </nav>
     </body>
