@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <head>
         <title>DIEE Tech - Login</title>
         <link type="text/css" rel="stylesheet" href="testcss.css" media="screen">
@@ -16,7 +15,10 @@
         <jsp:include page="nav.jsp"/>
         <main class="col-8">
             <h2 class="login-reg-title">Welcome back to DIEE Account</h2>
+            
+            
             <section id="login">
+                <c:if test="${empty username}">
                 <h3>Accedi all'area riservata del DIEE Tech.</h3>
                 <form action="login" method="POST">
                     <label  for="e-mail">E-mail</label>
@@ -27,7 +29,19 @@
                     <br>
                     <input type="submit" value="Accedi">
                 </form>
-            </section>      
+                </c:if>
+                <c:if test="${not empty username}">
+                <form action="logout" method="POST">
+                    <label for="logout">Effettua il logout</label>
+                    <br>
+                    <a href="logoutServlet"><button type="button">logout</button></a>
+                </form>
+                </c:if>
+            </section> 
+            
+            
+            
+           
         
         <br>
         
