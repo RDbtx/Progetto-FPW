@@ -29,7 +29,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <main class="col-8">    
             <section id="product_new" >
                 <h2>Inserisci prodotto</h2>
-            <form action="insert" method="POST">
+            <form action="NewProduct" method="POST">
                 <label for ="product_p">Prodotto: </label>
                 <input type = "text" id = "product_p" name = "product_p"><br>
                 <label for="quantity_p">Quantità:</label>
