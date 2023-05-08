@@ -43,10 +43,9 @@ public class Registrazione extends HttpServlet {
         String email = request.getParameter("e-mail");
         String password = request.getParameter("password");
         String pswrepet = request.getParameter("psw-repet");
-        //String message="ciao!";
+        String webpage = "login.jsp";
         int minUser=5, maxUser=20;
-        //int minPass=4, maxPass=50;
-        
+  
         
         try{
             Utils.checkString(name, minUser, maxUser);
