@@ -35,7 +35,7 @@ public class Utils {
     }  //controllo valori integrale
     
     
-       public static void checkFloat(String param, int min, int max) throws InvalidParamException{
+       public static void checkFloat(String param, double min, double max) throws InvalidParamException{
         try{
             float value = Float.valueOf(param);
             
