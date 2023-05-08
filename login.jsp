@@ -35,7 +35,7 @@
                     <h3>Sei autenticato come ${username}</h3>
                     <p>Effettua il logout</p>
                     <br>
-                    <a href="logoutServlet"><button type="button">Logout</button></a>
+                    <a href="logoutServlet"><button type="button">logout</button></a>
                 </form>
                 </c:if>
             </section> 
@@ -57,13 +57,13 @@
                 <input type="text" id="regsurname" placeholder="Rossi" name="surname">
                 <br>
                 <label for="rege-mail">E-mail</label>
-                <input type="email" id="rege-mail" placeholder="...@gmail.com" name="e-mail">
+                <input type="email" id="rege-mail" placeholder="...@gmail.com" name="e_mail">
                 <br>
                 <label for="regpassword">Password</label>
                 <input type="password" id="regpassword" placeholder="password" name="password">
                 <br>
                 <label for="psw-repeat">Ripetere la password</label>
-                <input type="password" placeholder="password" name="psw-repeat" id="psw-repeat">
+                <input type="password" placeholder="password" name="psw_repeat" id="psw_repeat">
                 <br>
                 <label for="image">Foto profilo</label>
                 <input type="file" accept="image/png, image/jpeg" placeholder="immagine" name="image" id="image">
