@@ -34,6 +34,19 @@ public class Utils {
         }
     }  //controllo valori integrale
     
+    
+       public static void checkFloat(String param, int min, int max) throws InvalidParamException{
+        try{
+            float value = Float.valueOf(param);
+            
+            if (value < min || value > max)
+                throw new InvalidParamException("la stringa deve avere una dimensione compresa tra " + min +" e " + max);
+            
+        } catch(NumberFormatException e){
+                throw new InvalidParamException("la stringa inserita non è un numero");
+        }
+    }//controlla i valori del float
+    
     static public boolean checkLogin( String username , String password){
         Hashtable<String,String> users = new Hashtable<String,String>();
         users.put("Deidda","00625");
