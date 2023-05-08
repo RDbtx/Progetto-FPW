@@ -61,7 +61,7 @@ public class Utils {
 
     public static Object convertTime(long time) {
         Calendar cal = Calendar.getInstance();
-        cal.setTimeZone(TimeZone.getTimeZone("UTC"));
+        cal.setTimeZone(TimeZone.getTimeZone("CET"));
         cal.setTimeInMillis(time);
         return (cal.get(Calendar.DAY_OF_MONTH) + "/" + (cal.get(Calendar.MONTH)+1) + "/" +
                 cal.get(Calendar.YEAR) + " " + cal.get(Calendar.HOUR_OF_DAY) + ":" + 
