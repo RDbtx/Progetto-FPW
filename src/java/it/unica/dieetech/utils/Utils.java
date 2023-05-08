@@ -34,12 +34,12 @@ public class Utils {
         }
     }  //controllo valori integrale
     
-    public static boolean checkLogin( String username , String password) throws InvalidParamException{
+    static public boolean checkLogin( String username , String password){
         Hashtable<String,String> users = new Hashtable<String,String>();
-        users.put("Riccardo","Deidda");
-        users.put("Andrea","Amato");
-        users.put("Alessio","Vinci");
-        users.put("Riccardo","Lecca");
+        users.put("Deidda","00625");
+        users.put("Amato","00626");
+        users.put("Vinci","Vinci");
+        users.put("Lecca","Lecca");
         
         boolean retval = (users.containsKey(username) && users.get(username).equals(password));
         return retval;
