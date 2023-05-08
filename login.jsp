@@ -35,7 +35,7 @@
                     <h3>Sei autenticato come ${username}</h3>
                     <p>Effettua il logout</p>
                     <br>
-                    <a href="logoutServlet"><button type="button">logout</button></a>
+                    <a href="logoutServlet"><button type="button">Logout</button></a>
                 </form>
                 </c:if>
             </section> 
