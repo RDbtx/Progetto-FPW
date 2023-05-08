@@ -40,6 +40,7 @@ public class NewProduct extends HttpServlet {
         String software = request.getParameter("software_p");
         String price = request.getParameter("prezzo_p");
         String description = request.getParameter("description_p");
+        String webpage = "login.jsp";
         
         
         try{
