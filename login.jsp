@@ -48,7 +48,7 @@
         
         <h2 class="login-reg-title">Welcome to DIEE Registration</h2>
         <section id="registration">
-            <form>
+            <form action="registrazione" method = "POST">
                 <h3>Compila il form per registrarti:</h3>
                 <label for="regname">Nome</label>
                 <input type="text" id="regname" placeholder="Mario" name="name">
