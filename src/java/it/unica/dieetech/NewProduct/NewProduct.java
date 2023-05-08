@@ -33,6 +33,8 @@ public class NewProduct extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
+        response.setContentType("text/html;charset=UTF-8");
+        
         String product = request.getParameter("product_p");
         String quantity = request.getParameter("quantity_p");
         String software = request.getParameter("software_p");
