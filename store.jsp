@@ -34,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <p>
                     Descrizione: Una scheda digitale programmabile tramite linguaggio Verilog.<br>
                     Programmi necessari: Vivado<br>
-                    Prezzo: $299,99<br>
+                    Prezzo: &#8364 299,99<br>
                     Quantità disponibili: 15<br>
                     </p>
                 </section>
@@ -43,7 +43,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <h3>Oscilloscopio da banco </h3>
                     <p>Descrizione: Oscilloscopio di archiviazione digitale da banco a 2 canali TBS1072C, 70 MHz <br>
                        Programma necessario: LabVIEW<br>
-                       Prezzo: $1019,99 <br>
+                       Prezzo: &#8364 1019,99 <br>
                        Quantità disponibili: 5<br>
                     </p>
                 </section>
@@ -53,7 +53,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <p>
                         Descrizione: Un router professionale ideale per reti aziendali, con servizi integrati <br>
                         Programmi necessari: Prompt dei comandi in base al sistema operativo<br>
-                        Prezzo: $399,99 <br>
+                        Prezzo: &#8364 399,99 <br>
                         Quantità disponibili: 28<br>
                     </p>
                 </section>
@@ -63,7 +63,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <p>
                         Un microcontrollore programabile tramite codice Arduino per l'utilizzo di LED e sensori. <br>
                         Programmi necessari: Arduino<br>
-                        Prezzo: $29,99 <br>
+                        Prezzo: &#8364 29,99 <br>
                         Quantità disponibili: 267<br>
                     </p>
                 </section>
@@ -74,3 +74,4 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </c:if>
     </body>
 </html>
+
