@@ -1,0 +1,16 @@
+<%-- 
+    Document   : footer
+    Created on : 4 mag 2023, 18:01:39
+    Author     : andre
+--%>
+
+<footer>
+    <p>
+        <b>DIEE Tech</b> <br>
+            Andrea Amato<br>
+            Riccardo Deidda<br>
+            Alessio Vinci<br>
+            Riccardo Lecca<br>
+        <a href="mailto:info@dieetech.it">info@dieetech.it</a><br>
+    </p>
+</footer>
