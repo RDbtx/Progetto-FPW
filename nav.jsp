@@ -19,7 +19,7 @@
                 </c:if>
                 <li><a href="chi_siamo.jsp">Chi siamo</a></li> 
                 <li><a href="login.jsp">Login</a></li>
-                <li><a href="AreaPersonale.jsp">PROFILO</a></li>
+                <li><a href="AreaPersonale.jsp">Area personale</a></li>
             </ul>
         </nav>
     </body>
