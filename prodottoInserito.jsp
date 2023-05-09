@@ -21,13 +21,13 @@
         </c:if>
         
         <c:if test="${not empty username}">
-            <jsp:include page="header.jsp"/> 
-            <jsp:include page="nav.jsp"/>
+            <%@include file="common/header.jspf" %> 
+            <%@include file="common/nav.jspf" %> 
             <main class="col-8">
                 <h1>Prodotto inserito con successo!</h1>
             </main>
-            <jsp:include page="aside.jsp"/>
-            <jsp:include page="footer.jsp"/>
+            <%@include file="common/aside.jspf" %> 
+            <%@include file="common/footer.jspf" %>
         </c:if>
     </body>
 </html>

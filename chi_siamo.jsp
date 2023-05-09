@@ -16,8 +16,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <jsp:include page="header.jsp"/> 
-        <jsp:include page="nav.jsp"/> 
+        <%@include file="common/header.jspf" %> 
+        <%@include file="common/nav.jspf" %> 
         <main class="col-8">
             <h2>Il Nostro Team</h2>
             <p> Esperti ingegneri, discepoli del Dieedaci  </p>
@@ -49,7 +49,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 maestro Muscaz, lui si. E fu inserito nella setta immediatamente.<br>
             </div>
         </main>
-        <jsp:include page="aside.jsp"/>
-        <jsp:include page="footer.jsp"/>
+        <%@include file="common/aside.jspf" %> 
+        <%@include file="common/footer.jspf" %>
     </body>
 </html>

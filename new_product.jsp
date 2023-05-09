@@ -24,8 +24,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </c:if>
         
         <c:if test="${not empty username}">
-        <jsp:include page="header.jsp"/> 
-        <jsp:include page="nav.jsp"/>
+        <%@include file="common/header.jspf" %> 
+        <%@include file="common/nav.jspf" %> 
         <main class="col-8">    
             <section id="product_new" >
                 <h2>Inserisci prodotto</h2>
@@ -46,8 +46,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </form>
             </section>  
         </main>
-        <jsp:include page="aside.jsp"/>
-        <jsp:include page="footer.jsp"/>
+        <%@include file="common/aside.jspf" %> 
+        <%@include file="common/footer.jspf" %> 
         </c:if>
     </body>
 </html>
