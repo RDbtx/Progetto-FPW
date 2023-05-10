@@ -46,9 +46,9 @@ public class NewProduct extends HttpServlet {
         try{
             Utils.checkString(product, 1, 20);
             Utils.checkInteger(quantity, 1, 1000 );
-            Utils.checkFloat(price, 0, 1000000);
+            Utils.checkFloat(price, 0, 999999);
             Utils.checkString(software, 1, 20);
-            Utils.checkString(description, 1, 150);
+            Utils.checkString(description, 1, 1000);
             
             response.sendRedirect("prodottoInserito.jsp");
         }    
