@@ -24,7 +24,7 @@
             <%@include file="common/header.jspf" %> 
             <%@include file="common/nav.jspf" %> 
             <main class="col-8">
-                <h1>Prodotto inserito con successo!</h1>
+                <h2>Prodotto inserito con successo!</h2>
             </main>
             <%@include file="common/aside.jspf" %> 
             <%@include file="common/footer.jspf" %>
