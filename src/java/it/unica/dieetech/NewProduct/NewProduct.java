@@ -54,6 +54,7 @@ public class NewProduct extends HttpServlet {
         }    
         catch(InvalidParamException e){
             
+            request.setAttribute("webpage", webpage);
             request.setAttribute("errorMessage", e.getMessage());
             request.getRequestDispatcher("error.jsp").forward(request,response);
             }
