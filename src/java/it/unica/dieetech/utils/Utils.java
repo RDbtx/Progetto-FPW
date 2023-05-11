@@ -68,5 +68,42 @@ public class Utils {
                 cal.get(Calendar.MINUTE) + ":" + cal.get(Calendar.SECOND));
     }   //riporta l'orario in cui è stata chiamata questa funzione
     
+    public static Object getName(String username){
+        Hashtable<String,String> usersName = new Hashtable<String,String>();
+        usersName.put("Deidda","Riccardo");
+        usersName.put("Amato","Andrea");
+        usersName.put("Vinci","Alessio");
+        usersName.put("Lecca","Riccardo");
+        
+        if(usersName.containsKey(username))
+            return usersName.get(username);
+        return null;
+    }
+    public static Object getMail(String username){
+        Hashtable<String,String> usersName = new Hashtable<String,String>();
+        usersName.put("Deidda","deidda@dieetech.it");
+        usersName.put("Amato","amato@dieetech.it");
+        usersName.put("Vinci","vinci@dieetech.it");
+        usersName.put("Lecca","lecca@dieetech.it");
+        
+        if(usersName.containsKey(username))
+            return usersName.get(username);
+        return null;
+    }
+    public static Object getCity(String username){
+        Hashtable<String,String> usersName = new Hashtable<String,String>();
+        usersName.put("Deidda","Pula (CA)");
+        usersName.put("Amato","Suni (OR)");
+        usersName.put("Vinci","Cagliari");
+        usersName.put("Lecca","Cagliari");
+        
+        if(usersName.containsKey(username))
+            return usersName.get(username);
+        return null;
+    }
+        
+        
+        
+    
     
 }

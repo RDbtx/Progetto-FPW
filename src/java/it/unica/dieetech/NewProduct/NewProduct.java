@@ -45,15 +45,16 @@ public class NewProduct extends HttpServlet {
         
         try{
             Utils.checkString(product, 1, 20);
-            Utils.checkInteger(quantity, 0, 1000 );
-            Utils.checkFloat(price, 0, 1000000);
-            Utils.checkString(software, 0, 20);
-            Utils.checkString(description, 0, 150);
+            Utils.checkInteger(quantity, 1, 1000 );
+            Utils.checkFloat(price, 0, 999999);
+            Utils.checkString(software, 1, 20);
+            Utils.checkString(description, 1, 1000);
             
             response.sendRedirect("prodottoInserito.jsp");
         }    
         catch(InvalidParamException e){
             
+            request.setAttribute("webpage", webpage);
             request.setAttribute("errorMessage", e.getMessage());
             request.getRequestDispatcher("error.jsp").forward(request,response);
             }

@@ -47,6 +47,9 @@ public class login extends HttpServlet {
             if(Utils.checkLogin(username,password)){
                
                 session.setAttribute("username", username);
+                session.setAttribute("nome", Utils.getName(username));
+                session.setAttribute("email", Utils.getMail(username));
+                session.setAttribute("citta", Utils.getCity(username));
                 session.setAttribute("lastlogin",Utils.convertTime(session.getLastAccessedTime()));
                 session.setMaxInactiveInterval(300); //la sessione dura 5 min
                 response.sendRedirect("areaPersonale"); 
