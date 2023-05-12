@@ -34,7 +34,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <p>
                     Descrizione: Una scheda digitale programmabile tramite linguaggio Verilog.<br>
                     Programmi necessari: Vivado<br>
-                    Prezzo: "&#8364" 299,99<br>
+                    Prezzo: &#8364 299,99<br>
                     Quantità disponibili: 15<br>
                     </p>
                 </section>
@@ -53,7 +53,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                     <p>
                         Descrizione: Un router professionale ideale per reti aziendali, con servizi integrati <br>
                         Programmi necessari: Prompt dei comandi in base al sistema operativo<br>
-                        Prezzo: "&#8364" 399,99 <br>
+                        Prezzo: &#8364 399,99 <br>
                         Quantità disponibili: 28<br>
                     </p>
                 </section>
