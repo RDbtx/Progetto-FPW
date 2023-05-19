@@ -15,11 +15,12 @@
         </c:if>
         
         <c:if test="${not empty username}">
-            <jsp:include page="header.jsp"/> 
-            <jsp:include page="nav.jsp"/>
+            <%@include file="common/header.jspf" %> 
+            <%@include file="common/nav.jspf" %> 
             <main class="col-8">
                 <h1>Benvenuto ${nome}!</h1>
-                <p><h3>Informazioni personali:</h3><br>
+                <div class="person"><h3>Informazioni personali:</h3><br>
+                   <img src="${foto}" height="100" alt="Profilo Amato"/><br>
                    Nome: ${nome}<br>
                    Cognome: ${username}<br>
                    E-mail: ${email}<br>
@@ -27,10 +28,10 @@
                    Ultimo accesso: ${lastlogin}<br><br>
                    Effettua il logout<br>
                    <a href="logoutServlet"><button type="button">Logout</button></a>
-                </p>
+                </div>
             </main>
-            <jsp:include page="aside.jsp"/>
-            <jsp:include page="footer.jsp"/>
+            <%@include file="common/aside.jspf" %> 
+            <%@include file="common/footer.jspf" %>
         </c:if>
     </body>
 </html>

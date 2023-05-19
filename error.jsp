@@ -10,16 +10,15 @@
         <title>DIEE Tech - Errore</title>
     </head>
     <body>
-            <jsp:include page="header.jsp"/> 
-            <jsp:include page="nav.jsp"/>
-            <main class="col-8">
-                <h1>Errore:</h1>
-                <p><h2>${errorMessage}</h2><br>
-                <a href="${webpage}">Torna al form precedente</a>
-                </p>
-            </main>
-            <jsp:include page="aside.jsp"/>
-            <jsp:include page="footer.jsp"/>
-        
+        <%@include file="common/header.jspf" %> 
+        <%@include file="common/nav.jspf" %> 
+        <main class="col-8">
+            <h1>Errore:</h1>
+            <p><h2>${errorMessage}</h2><br>
+            <a href="${webpage}">Torna al form precedente</a>
+            </p>
+        </main>
+        <%@include file="common/aside.jspf" %> 
+        <%@include file="common/footer.jspf" %> 
     </body>
 </html>

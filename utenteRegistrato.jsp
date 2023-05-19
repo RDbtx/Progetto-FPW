@@ -16,18 +16,12 @@
         <title>DIEE Tech - Utente Registrato</title>
     </head>
     <body>
-        <c:if test="${empty username}">
-            <c:redirect url="login.jsp"/>
-        </c:if>
-        
-        <c:if test="${not empty username}">
-            <jsp:include page="header.jsp"/> 
-            <jsp:include page="nav.jsp"/>
-            <main class="col-8">
-                <h1>Utente registrato con successo!</h1>
-            </main>
-            <jsp:include page="aside.jsp"/>
-            <jsp:include page="footer.jsp"/>
-        </c:if>
+        <%@include file="common/header.jspf" %> 
+        <%@include file="common/nav.jspf" %> 
+        <main class="col-8">
+            <h2>Utente registrato con successo!</h2>
+        </main>
+        <%@include file="common/aside.jspf" %> 
+        <%@include file="common/footer.jspf" %> 
     </body>
 </html>

@@ -1,4 +1,6 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
     <head>
         <title>DIEE Tech - Login</title>
         <link type="text/css" rel="stylesheet" href="testcss.css" media="screen">
@@ -11,8 +13,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <jsp:include page="header.jsp"/> 
-        <jsp:include page="nav.jsp"/>
+        <%@include file="common/header.jspf" %> 
+        <%@include file="common/nav.jspf" %> 
         <main class="col-8">
             <h2 class="login-reg-title">Welcome back to DIEE Account</h2>
             
@@ -35,7 +37,7 @@
                     <h3>Sei autenticato come ${username}</h3>
                     <p>Effettua il logout</p>
                     <br>
-                    <a href="logoutServlet"><button type="button">logout</button></a>
+                    <a href="logoutServlet"><button type="button">Logout</button></a>
                 </form>
                 </c:if>
             </section> 
@@ -74,7 +76,7 @@
             </form>
         </section>
         </main>
-        <jsp:include page="aside.jsp"/>
-        <jsp:include page="footer.jsp"/>
+        <%@include file="common/aside.jspf" %> 
+        <%@include file="common/footer.jspf" %>
     </body> 
 </html>    
