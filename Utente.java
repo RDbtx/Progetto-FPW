@@ -15,7 +15,8 @@ public class Utente {
     private String nome;
     private String cognome;
     private String e_mail;
-    
+    private String foto;
+    private String foto;
     
     //costruttore vuoto
     public Utente(){}
@@ -61,7 +62,7 @@ public class Utente {
     public void setE_Mail(String e_mail) {
         this.e_mail = e_mail;
     }
-/* TI SEI DIMENTICATO DI METTERLO NEL DATABASE
+
     public String getFoto() {
         return foto;
     }
@@ -69,7 +70,7 @@ public class Utente {
     public void setFoto(String foto) {
         this.foto = foto;
     }
-*/
+
     
     @Override
     public boolean equals(Object obj){
