@@ -39,7 +39,7 @@ public class login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         HttpSession session = request.getSession();
-        String username = request.getParameter("e-mail");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
         String webpage = "login.jsp";
         
@@ -51,11 +51,7 @@ public class login extends HttpServlet {
             
             if(utente != null){
                 session.setAttribute("username", username);
-                session.setAttribute("nome", utente.getNome());
-                session.setAttribute("cognome", utente.getCognome());
-                session.setAttribute("email", utente.getEmail());
-                session.setAttribute("citta", utente.getCitta());
-                session.setAttribute("foto", utente.getFoto());
+                session.setAttribute("utente", utente);
                 session.setAttribute("lastlogin",Utils.convertTime(session.getLastAccessedTime()));
                 session.setMaxInactiveInterval(300); //la sessione dura 5 min
                 response.sendRedirect("areaPersonale"); 
