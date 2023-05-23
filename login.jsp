@@ -23,8 +23,8 @@
                 <c:if test="${empty username}">
                 <h3>Accedi all'area riservata del DIEE Tech.</h3>
                 <form action="login" method="POST">
-                    <label  for="e-mail">E-mail</label>
-                    <input  type="text" name="e-mail" id="e-mail">
+                    <label  for="username">Username</label>
+                    <input  type="text" name="username" id="username">
                     <br>
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password">

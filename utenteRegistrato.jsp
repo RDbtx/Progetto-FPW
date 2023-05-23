@@ -20,6 +20,7 @@
         <%@include file="common/nav.jspf" %> 
         <main class="col-8">
             <h2>Utente registrato con successo!</h2>
+            <a href="login.jsp"><button type="button">Accedi</button></a>
         </main>
         <%@include file="common/aside.jspf" %> 
         <%@include file="common/footer.jspf" %> 

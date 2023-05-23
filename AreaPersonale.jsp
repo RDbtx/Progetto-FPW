@@ -10,21 +10,21 @@
         <title>DIEE Tech - Area Personale</title>
     </head>
     <body>
-        <c:if test="${empty username}">
+        <c:if test="${empty utente.username}">
             <c:redirect url="login.jsp"/>
         </c:if>
         
-        <c:if test="${not empty username}">
+        <c:if test="${not empty utente.username}">
             <%@include file="common/header.jspf" %> 
             <%@include file="common/nav.jspf" %> 
             <main class="col-8">
-                <h1>Benvenuto ${nome}!</h1>
+                <h1>Benvenuto ${utente.nome}!</h1>
                 <div class="person"><h3>Informazioni personali:</h3><br>
-                   <img src="${foto}" height="100" alt="Profilo Amato"/><br>
-                   Nome: ${nome}<br>
-                   Cognome: ${username}<br>
-                   E-mail: ${email}<br>
-                   Città: ${citta}<br>
+                   <img src="${utente.foto}" height="100" alt="Profilo ${utente.cognome}"/><br>
+                   Nome: ${utente.nome}<br>
+                   Cognome: ${utente.cognome}<br>
+                   E-mail: ${utente.email}<br>
+                   Città: ${utente.citta}<br>
                    Ultimo accesso: ${lastlogin}<br><br>
                    Effettua il logout<br>
                    <a href="logoutServlet"><button type="button">Logout</button></a>
