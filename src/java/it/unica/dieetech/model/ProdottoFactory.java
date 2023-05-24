@@ -66,4 +66,32 @@ public class ProdottoFactory {
         }
         return null;
     }
+    public void setProdotto(String nome, String descrizione, int quantita, String software, float prezzo, String utente_id, String foto){
+          Connection conn = null;
+          PreparedStatement stmt = null;
+          
+          try{
+              conn = DatabaseManager.getInstance().getDbConnection();
+              String query = "INSERT INTO prodotti (id, nome, descrizione, software, prezzo, quantita, utente_id, foto) "
+                      + "VALUES (default, ? , ? , ? , ? , ? , ? , ?);";
+                  
+              stmt = conn.prepareStatement(query);
+              stmt.setString(1,nome);
+              stmt.setString(2, descrizione);
+              stmt.setString(3,software);
+              stmt.setFloat(4,prezzo);
+              stmt.setInt(5,quantita);
+              stmt.setString(6, utente_id);
+              stmt.setString(7,foto);
+
+              stmt.executeQuery();
+                     
+          }catch(SQLException e){
+              Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
+         
+          }finally{
+              try{stmt.close();}catch(Exception e){}
+              try{conn.close();}catch(Exception e){}
+          }
+    }
 }
