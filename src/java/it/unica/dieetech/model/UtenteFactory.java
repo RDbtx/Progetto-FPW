@@ -64,6 +64,33 @@ public class UtenteFactory {
         }
         return null;
     }
+    public void setUtente(String username, String nome, String cognome, String email, String password, String citta, String foto){
+          Connection conn = null;
+          PreparedStatement stmt = null;
+          
+          try{
+              conn = DatabaseManager.getInstance().getDbConnection();
+              String query = "INSERT INTO utenti (username,pass,nome,cognome,email,citta,foto) "
+                      + "VALUES ( ? , ? , ? , ? , ? , ? , ? );";
+                  
+              stmt = conn.prepareStatement(query);
+              stmt.setString(1,username);
+              stmt.setString(2,password);
+              stmt.setString(3,nome);
+              stmt.setString(4,cognome);
+              stmt.setString(5,email);
+              stmt.setString(6,citta);
+              stmt.setString(7,foto);
+              stmt.executeQuery();
+                     
+          }catch(SQLException e){
+              Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
+         
+          }finally{
+              try{stmt.close();}catch(Exception e){}
+              try{conn.close();}catch(Exception e){}
+          }
+    }
 }
 
 

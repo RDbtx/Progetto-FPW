@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import it.unica.dieetech.exceptions.InvalidParamException;
+import it.unica.dieetech.model.UtenteFactory;
 import it.unica.dieetech.utils.Utils;
 
 /**
@@ -36,27 +37,26 @@ public class Registrazione extends HttpServlet {
     
         response.setContentType("text/html;charset=UTF-8");
         
-        HttpSession session = request.getSession();
-        
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
+        String username = request.getParameter("username");
         String email = request.getParameter("e_mail");
+        String citta = request.getParameter("citta");
         String password = request.getParameter("password");
         String pswrepet = request.getParameter("psw_repeat");
         String webpage = "login.jsp";
         
         
-        
-        int minUser=5, maxUser=20;
-        //int minPass=4, maxPass=50;
-        
-        
         try{
-            Utils.checkString(name, minUser, maxUser);
-            Utils.checkString(surname, minUser, maxUser);
-            Utils.checkString(email, minUser, maxUser);
-            Utils.checkString(password, minUser, maxUser);
-            Utils.checkString(pswrepet, minUser, maxUser);
+            Utils.checkString(name, 1, 20);
+            Utils.checkString(surname, 1, 20);
+            Utils.checkString(username, 3, 20);
+            Utils.checkString(citta, 2, 50);
+            Utils.checkString(email, 10, 50);
+            Utils.checkString(password, 5, 25);
+            Utils.checkString(pswrepet, 5, 25);
+            
+            UtenteFactory.getInstance().setUtente(username, name, surname, email, password, citta, "placeholder.jpg");
             
             
             response.sendRedirect("utenteRegistrato.jsp");//redirect alla nuova jsp user (areaPersonale)
@@ -66,7 +66,7 @@ public class Registrazione extends HttpServlet {
             
             request.setAttribute("webpage", webpage);
             request.setAttribute("errorMessage",e.getMessage());
-           request.getRequestDispatcher("error.jsp").forward(request, response);
+            request.getRequestDispatcher("error.jsp").forward(request, response);
           
         }
         
