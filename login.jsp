@@ -52,26 +52,26 @@
         <section id="registration">
             <form action="registrazione" method = "POST">
                 <h3>Compila il form per registrarti:</h3>
-                <label for="regusername">Username</label>
-                <input type="text" id="regusername" placeholder="Cicciogamer89" name="username">
-                <br>
                 <label for="regname">Nome</label>
                 <input type="text" id="regname" placeholder="Mario" name="name">
                 <br>
                 <label for="regsurname">Cognome</label>
                 <input type="text" id="regsurname" placeholder="Rossi" name="surname">
                 <br>
+                <label for="regsurname">Username</label>
+                <input type="text" id="regusername" placeholder="mariorossi00" name="username">
+                <br>
                 <label for="rege-mail">E-mail</label>
                 <input type="email" id="rege-mail" placeholder="...@gmail.com" name="e_mail">
+                <br>
+                <label for="regsurname">Città</label>
+                <input type="text" id="regcity" placeholder="Roma" name="citta">
                 <br>
                 <label for="regpassword">Password</label>
                 <input type="password" id="regpassword" placeholder="password" name="password">
                 <br>
                 <label for="psw-repeat">Ripetere la password</label>
                 <input type="password" placeholder="password" name="psw_repeat" id="psw_repeat">
-                <br>
-                <label for="citta">Residenza</label>
-                <input type="text" id="citta" placeholder="Cagliari" name="citta">
                 <br>
                 <label for="image">Foto profilo</label>
                 <input type="file" accept="image/png, image/jpeg" placeholder="immagine" name="image" id="image">
