@@ -52,6 +52,9 @@
         <section id="registration">
             <form action="registrazione" method = "POST">
                 <h3>Compila il form per registrarti:</h3>
+                <label for="regusername">Username</label>
+                <input type="text" id="regusername" placeholder="Cicciogamer89" name="username">
+                <br>
                 <label for="regname">Nome</label>
                 <input type="text" id="regname" placeholder="Mario" name="name">
                 <br>
@@ -66,6 +69,9 @@
                 <br>
                 <label for="psw-repeat">Ripetere la password</label>
                 <input type="password" placeholder="password" name="psw_repeat" id="psw_repeat">
+                <br>
+                <label for="citta">Residenza</label>
+                <input type="text" id="citta" placeholder="Cagliari" name="citta">
                 <br>
                 <label for="image">Foto profilo</label>
                 <input type="file" accept="image/png, image/jpeg" placeholder="immagine" name="image" id="image">
