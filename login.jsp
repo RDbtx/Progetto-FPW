@@ -23,8 +23,8 @@
                 <c:if test="${empty username}">
                 <h3>Accedi all'area riservata del DIEE Tech.</h3>
                 <form action="login" method="POST">
-                    <label  for="e-mail">E-mail</label>
-                    <input  type="text" name="e-mail" id="e-mail">
+                    <label  for="username">Username</label>
+                    <input  type="text" name="username" id="username">
                     <br>
                     <label for="password">Password</label>
                     <input type="password" name="password" id="password">
@@ -50,7 +50,7 @@
         
         <h2 class="login-reg-title">Welcome to DIEE Registration</h2>
         <section id="registration">
-            <form action="registrazione" method = "POST">
+            <form enctype="multipart/form-data" action="registrazione" method = "POST">
                 <h3>Compila il form per registrarti:</h3>
                 <label for="regname">Nome</label>
                 <input type="text" id="regname" placeholder="Mario" name="name">
@@ -58,8 +58,14 @@
                 <label for="regsurname">Cognome</label>
                 <input type="text" id="regsurname" placeholder="Rossi" name="surname">
                 <br>
+                <label for="regsurname">Username</label>
+                <input type="text" id="regusername" placeholder="mariorossi00" name="username">
+                <br>
                 <label for="rege-mail">E-mail</label>
                 <input type="email" id="rege-mail" placeholder="...@gmail.com" name="e_mail">
+                <br>
+                <label for="regsurname">Città</label>
+                <input type="text" id="regcity" placeholder="Roma" name="citta">
                 <br>
                 <label for="regpassword">Password</label>
                 <input type="password" id="regpassword" placeholder="password" name="password">

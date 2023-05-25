@@ -5,6 +5,7 @@
 package it.unica.dieetech.NewProduct;
 
 import it.unica.dieetech.exceptions.InvalidParamException;
+import it.unica.dieetech.model.ProdottoFactory;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import it.unica.dieetech.utils.Utils;
+import javax.servlet.http.HttpSession;
 
 
 /**
@@ -35,20 +37,28 @@ public class NewProduct extends HttpServlet {
         
         response.setContentType("text/html;charset=UTF-8");
         
+        HttpSession session = request.getSession(false);
+        
         String product = request.getParameter("product_p");
         String quantity = request.getParameter("quantity_p");
         String software = request.getParameter("software_p");
         String price = request.getParameter("prezzo_p");
         String description = request.getParameter("description_p");
+        String utente_id = (String) session.getAttribute("username");
         String webpage = "login.jsp";
         
         
         try{
             Utils.checkString(product, 1, 20);
             Utils.checkInteger(quantity, 1, 1000 );
-            Utils.checkFloat(price, 0.01, 999999);
+            Utils.checkFloat(price, 0, 999999);
             Utils.checkString(software, 1, 20);
             Utils.checkString(description, 1, 1000);
+            
+            int quantita = Integer.parseInt(quantity);
+            float prezzo = Float.parseFloat(price);
+            
+            ProdottoFactory.getInstance().setProdotto(product, description, quantita, software, prezzo, utente_id, "placeholder.jpg");
             
             response.sendRedirect("prodottoInserito.jsp");
         }    

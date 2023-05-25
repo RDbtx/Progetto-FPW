@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import it.unica.dieetech.exceptions.InvalidParamException;
+import it.unica.dieetech.model.Utente;
+import it.unica.dieetech.model.UtenteFactory;
 import it.unica.dieetech.utils.Utils;
 import javax.servlet.http.HttpSession;
 
@@ -37,16 +39,19 @@ public class login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         HttpSession session = request.getSession();
-        String username = request.getParameter("e-mail");
+        String username = request.getParameter("username");
         String password = request.getParameter("password");
         String webpage = "login.jsp";
         
         try{
             Utils.checkString(username, 1, 20);
-            Utils.checkString(password,1,5);     
-            if(Utils.checkLogin(username,password)){
-               
+            Utils.checkString(password,1,20); 
+            
+            Utente utente = UtenteFactory.getInstance().getUtentebyUsernamePassword(username, password);
+            
+            if(utente != null){
                 session.setAttribute("username", username);
+                session.setAttribute("utente", utente);
                 session.setAttribute("lastlogin",Utils.convertTime(session.getLastAccessedTime()));
                 session.setMaxInactiveInterval(300); //la sessione dura 5 min
                 response.sendRedirect("areaPersonale"); 

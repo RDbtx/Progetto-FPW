@@ -35,6 +35,18 @@ public class Utils {
     }  //controllo valori integrale
     
     
+    public static void checkEqual(String password, String opassword) throws InvalidParamException{
+       
+        if (password == null){
+            throw new InvalidParamException("Parametro nullo");
+        }
+        if ( !password.equals(opassword)){
+            throw new InvalidParamException("La password inserita non corrisponde a quella originale");   
+        }
+    }  //controlla che la password inserita sia identica a quella inizale  
+
+    
+    
        public static void checkFloat(String param, double min, double max) throws InvalidParamException{
         try{
             float value = Float.valueOf(param);
@@ -66,7 +78,5 @@ public class Utils {
         return (cal.get(Calendar.DAY_OF_MONTH) + "/" + (cal.get(Calendar.MONTH)+1) + "/" +
                 cal.get(Calendar.YEAR) + " " + cal.get(Calendar.HOUR_OF_DAY) + ":" + 
                 cal.get(Calendar.MINUTE) + ":" + cal.get(Calendar.SECOND));
-    }   //riporta l'orario in cui è stata chiamata questa funzione
-    
-    
+    }   //riporta l'orario in cui è stata chiamata questa funzione  
 }

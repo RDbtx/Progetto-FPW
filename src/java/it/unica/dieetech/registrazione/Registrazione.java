@@ -11,15 +11,24 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import it.unica.dieetech.exceptions.InvalidParamException;
+import it.unica.dieetech.model.Immagine;
+import it.unica.dieetech.model.ImmagineFactory;
+import it.unica.dieetech.model.UtenteFactory;
 import it.unica.dieetech.utils.Utils;
+import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.http.Part;
 
 /**
  *
  * @author user
  */
 @WebServlet(name = "Registrazione", urlPatterns = {"/registrazione"})
+@MultipartConfig
 public class Registrazione extends HttpServlet {
 
     /**
@@ -34,46 +43,43 @@ public class Registrazione extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
     
-        response.setContentType("text/html;charset=UTF-8");
-        
-        HttpSession session = request.getSession();
+        response.setContentType("multipart/form-data");
         
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
+        String username = request.getParameter("username");
         String email = request.getParameter("e_mail");
+        String citta = request.getParameter("citta");
         String password = request.getParameter("password");
         String pswrepet = request.getParameter("psw_repeat");
         String webpage = "login.jsp";
         
+        Part file = request.getPart("image");
         
-        
-        int minUser=5, maxUser=20;
-        //int minPass=4, maxPass=50;
-        
-        
-        try{
-            Utils.checkString(name, minUser, maxUser);
-            Utils.checkString(surname, minUser, maxUser);
-            Utils.checkString(email, minUser, maxUser);
-            Utils.checkString(password, minUser, maxUser);
-            Utils.checkString(pswrepet, minUser, maxUser);
+        try(InputStream contenutoFile = file.getInputStream()){
+            Utils.checkString(name, 1, 20);
+            Utils.checkString(surname, 1, 20);
+            Utils.checkString(username, 3, 20);
+            Utils.checkString(citta, 2, 50);
+            Utils.checkString(email, 10, 50);
+            Utils.checkString(password, 1, 25);
+            Utils.checkEqual(pswrepet,password);
+
+            File fileDaSalvare = new File("/Users/ricca/Documents/NetBeansProjects/ProgettoFPW/web/uploads/" + file.getSubmittedFileName());
+            Files.copy(contenutoFile,fileDaSalvare.toPath(),StandardCopyOption.REPLACE_EXISTING);
+            String url = "http://localhost:8080/ProgettoFPW/uploads/" + file.getSubmittedFileName();
+
+            if(ImmagineFactory.getInstance().addImmagine(new Immagine (request.getParameter("username"), file.getSubmittedFileName(), url))){
             
-            
-            response.sendRedirect("utenteRegistrato.jsp");//redirect alla nuova jsp user (areaPersonale)
-            
-      
-        } catch(InvalidParamException e){
-            
-            request.setAttribute("webpage", webpage);
-            request.setAttribute("errorMessage",e.getMessage());
-           request.getRequestDispatcher("error.jsp").forward(request, response);
-          
-        }
-        
-        
-        
-        
-        
+                    UtenteFactory.getInstance().setUtente(username, name, surname, email, password, citta, url);
+                    response.sendRedirect("utenteRegistrato.jsp");//redirect alla nuova jsp user (areaPersonale)
+            	}
+            }catch(InvalidParamException e){
+                    request.setAttribute("webpage", webpage);
+                    request.setAttribute("errorMessage",e.getMessage());
+                    request.getRequestDispatcher("error.jsp").forward(request, response);
+            }
+
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");

@@ -18,59 +18,38 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <c:if test="${empty username}">
+        <c:if test="${empty utente.username}">
             <c:redirect url="login.jsp"/>
         </c:if>
         
-        <c:if test="${not empty username}">
-        <%@include file="common/header.jspf" %> 
-        <%@include file="common/nav.jspf" %> 
-        <main class="col-8">
-            <article>
-                <h2>Lista prodotti</h2>
-                <section class="product">
-                    <img src="img/immagini-store/FPGA.jpeg" width="100" alt="FPGA"/>
-                    <h3>FPGA Artix 7</h3>
-                    <p>
-                    Descrizione: Una scheda digitale programmabile tramite linguaggio Verilog.<br>
-                    Programmi necessari: Vivado<br>
-                    Prezzo: &#8364 299,99<br>
-                    Quantità disponibili: 15<br>
-                    </p>
-                </section>
-                <section class="product">
-                    <img src="img/immagini-store/Osc_2.jpg" width="100" alt="Oscilloscopio"/>
-                    <h3>Oscilloscopio da banco </h3>
-                    <p>Descrizione: Oscilloscopio di archiviazione digitale da banco a 2 canali TBS1072C, 70 MHz <br>
-                       Programma necessario: LabVIEW<br>
-                       Prezzo: &#8364 1019,99 <br>
-                       Quantità disponibili: 5<br>
-                    </p>
-                </section>
-                <section class="product">
-                    <img src="img/immagini-store/router.jpg" width="100" alt="Router"/>
-                    <h3>Router 4300 series </h3>
-                    <p>
-                        Descrizione: Un router professionale ideale per reti aziendali, con servizi integrati <br>
-                        Programmi necessari: Prompt dei comandi in base al sistema operativo<br>
-                        Prezzo: &#8364 399,99 <br>
-                        Quantità disponibili: 28<br>
-                    </p>
-                </section>
-                <section class="product">
-                    <img src="img/immagini-store/arduino.jpeg" width="100" alt="Arduino"/>
-                    <h3>Arduino Uno </h3>
-                    <p>
-                        Un microcontrollore programabile tramite codice Arduino per l'utilizzo di LED e sensori. <br>
-                        Programmi necessari: Arduino<br>
-                        Prezzo: &#8364 29,99 <br>
-                        Quantità disponibili: 267<br>
-                    </p>
-                </section>
-            </article>
-        </main>
-        <%@include file="common/aside.jspf" %> 
-        <%@include file="common/footer.jspf" %>
+        <c:if test="${not empty utente.username}">
+            <%@include file="common/header.jspf" %> 
+            <%@include file="common/nav.jspf" %>
+            <c:if test="${empty listaProdotti}">
+                <c:redirect url="store"/>
+            </c:if>
+            <c:if test="${not empty listaProdotti}">
+                <main class="col-8">
+                    <article>
+                        <h2>Lista prodotti</h2>
+                        <c:forEach items="${listaProdotti}" var="prodotto">
+                            <section class="product">
+                            <img src="${prodotto.getFoto()}" width="100" alt="Foto ${prodotto.getNome()}"/>
+                            <h3>${prodotto.getNome()}</h3>
+                            <p>
+                                Descrizione: ${prodotto.getDescrizione()}<br>
+                                Programmi necessari: ${prodotto.getSoftware()}<br>
+                                Prezzo: &#8364 ${prodotto.getPrezzo()}<br>
+                                Quantità disponibili: ${prodotto.getQuantita()}<br>
+                                Autore: ${prodotto.getUtente_id()}<br>
+                            </p>
+                            </section>
+                        </c:forEach>
+                    </article>
+                </main>
+                <%@include file="common/aside.jspf" %> 
+                <%@include file="common/footer.jspf" %>
+            </c:if>
         </c:if>
     </body>
 </html>
