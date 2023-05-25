@@ -59,17 +59,6 @@ public class Utils {
         }
     }//controlla i valori del float
     
-    static public boolean checkLogin( String username , String password){
-        Hashtable<String,String> users = new Hashtable<String,String>();
-        users.put("Deidda","00625");
-        users.put("Amato","00626");
-        users.put("Vinci","00991");
-        users.put("Lecca","00847");
-        
-        boolean retval = (users.containsKey(username) && users.get(username).equals(password));
-        return retval;
-        
-    }   //serve a controllare i dati di login
 
     public static Object convertTime(long time) {
         Calendar cal = Calendar.getInstance();
