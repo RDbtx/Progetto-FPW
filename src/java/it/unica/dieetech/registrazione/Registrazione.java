@@ -54,7 +54,7 @@ public class Registrazione extends HttpServlet {
             Utils.checkString(citta, 2, 50);
             Utils.checkString(email, 10, 50);
             Utils.checkString(password, 5, 25);
-            Utils.checkString(pswrepet, 5, 25);
+            Utils.checkEqual(pswrepet, password);
             
             UtenteFactory.getInstance().setUtente(username, name, surname, email, password, citta, "placeholder.jpg");
             
