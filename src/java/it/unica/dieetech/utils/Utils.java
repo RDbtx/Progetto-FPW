@@ -35,6 +35,18 @@ public class Utils {
     }  //controllo valori integrale
     
     
+    public static void checkEqual(String password, String opassword) throws InvalidParamException{
+       
+        if (password == null){
+            throw new InvalidParamException("Parametro nullo");
+        }
+        if ( !password.equals(opassword)){
+            throw new InvalidParamException("La password inserita non corrisponde a quella originale");   
+        }
+    }  //controlla che la password inserita sia identica a quella inizale  
+
+    
+    
        public static void checkFloat(String param, double min, double max) throws InvalidParamException{
         try{
             float value = Float.valueOf(param);
