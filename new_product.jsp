@@ -29,7 +29,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <main class="col-8">    
             <section id="product_new" >
                 <h2>Inserisci prodotto</h2>
-            <form action="NewProduct" method="POST">
+            <form enctype="multipart/form-data" action="NewProduct" method="POST">
                 <label for ="product_p">Prodotto: </label>
                 <input type = "text" id = "product_p" name = "product_p"><br>
                 <label for="quantity_p">Quantità:</label>
@@ -39,7 +39,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 <label for="prezzo_p">Prezzo:</label>
                 <input type = "number" id = "prezzo_p" name = "prezzo_p" min ="0.00" step ="0.1"  value ="0.00"><br>
                 <label for ="image_p">Immagine:</label>
-                <input type="file" id = "image_p" name = "image_p"><br>
+                <input type="file" accept="image/png, image/jpeg" placeholder="immagine" name="image_p" id="image"><br>
                 <label for ="description_p">Descrizione:</label>
                 <textarea maxlength="10000" name ="description_p" id ="description_p" placeholder="max 1000 caratteri"></textarea><br>
                 <input type="submit">
