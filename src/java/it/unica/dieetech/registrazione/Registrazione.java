@@ -54,7 +54,13 @@ public class Registrazione extends HttpServlet {
         String pswrepet = request.getParameter("psw_repeat");
         String webpage = "login.jsp";
         
+        //parametri utili per il caricamento immagini
+        String immagine = request.getParameter("immagine");
+        String url;
+        String Nome_file;
+        
         Part file = request.getPart("image");
+        
         
         try(InputStream contenutoFile = file.getInputStream()){
             Utils.checkString(name, 1, 20);
@@ -64,12 +70,21 @@ public class Registrazione extends HttpServlet {
             Utils.checkString(email, 10, 50);
             Utils.checkString(password, 1, 25);
             Utils.checkEqual(pswrepet,password);
+            
+            
+            if(immagine == null){
+                url = "http://localhost:8080/ProgettoFPW/img/DT_bk.png";
+                Nome_file = "immagine stock";
+                } //se non vi è caricato un file carico l'immagine di stock
+            
+            else{
 
             File fileDaSalvare = new File("/Users/ricca/Documents/NetBeansProjects/ProgettoFPW/web/uploads/" + file.getSubmittedFileName());
             Files.copy(contenutoFile,fileDaSalvare.toPath(),StandardCopyOption.REPLACE_EXISTING);
-            String url = "http://localhost:8080/ProgettoFPW/uploads/" + file.getSubmittedFileName();
+            url = "http://localhost:8080/ProgettoFPW/uploads/" + file.getSubmittedFileName();
+            Nome_file = file.getSubmittedFileName();}
 
-            if(ImmagineFactory.getInstance().addImmagine(new Immagine (request.getParameter("username"), file.getSubmittedFileName(), url))){
+            if(ImmagineFactory.getInstance().addImmagine(new Immagine (request.getParameter("username"), Nome_file , url))){
             
                     UtenteFactory.getInstance().setUtente(username, name, surname, email, password, citta, url);
                     response.sendRedirect("utenteRegistrato.jsp");//redirect alla nuova jsp user (areaPersonale)
