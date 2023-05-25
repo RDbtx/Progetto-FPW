@@ -45,7 +45,7 @@ public class login extends HttpServlet {
         
         try{
             Utils.checkString(username, 1, 20);
-            Utils.checkString(password,1,5); 
+            Utils.checkString(password,1,20); 
             
             Utente utente = UtenteFactory.getInstance().getUtentebyUsernamePassword(username, password);
             
