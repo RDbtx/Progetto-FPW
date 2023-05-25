@@ -5,7 +5,6 @@
 package it.unica.dieetech.registrazione;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -53,9 +52,6 @@ public class Registrazione extends HttpServlet {
         String password = request.getParameter("password");
         String pswrepet = request.getParameter("psw_repeat");
         String webpage = "login.jsp";
-        
-        //parametri utili per il caricamento immagini
-        String immagine = request.getParameter("immagine");
         String url;
         String Nome_file;
         
@@ -72,10 +68,10 @@ public class Registrazione extends HttpServlet {
             Utils.checkEqual(pswrepet,password);
             
             
-            if(immagine == null){
+            if(file.getSubmittedFileName().isEmpty()){
                 url = "http://localhost:8080/ProgettoFPW/img/DT_bk.png";
                 Nome_file = "immagine stock";
-                } //se non vi è caricato un file carico l'immagine di stock
+                }
             
             else{
 
@@ -84,7 +80,7 @@ public class Registrazione extends HttpServlet {
             url = "http://localhost:8080/ProgettoFPW/uploads/" + file.getSubmittedFileName();
             Nome_file = file.getSubmittedFileName();}
 
-            if(ImmagineFactory.getInstance().addImmagine(new Immagine (request.getParameter("username"), Nome_file , url))){
+            if(ImmagineFactory.getInstance().addImmagine(new Immagine (request.getParameter("name"), Nome_file , url))){
             
                     UtenteFactory.getInstance().setUtente(username, name, surname, email, password, citta, url);
                     response.sendRedirect("utenteRegistrato.jsp");//redirect alla nuova jsp user (areaPersonale)
@@ -95,18 +91,6 @@ public class Registrazione extends HttpServlet {
                     request.getRequestDispatcher("error.jsp").forward(request, response);
             }
 
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet Registrazione</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet Registrazione at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
