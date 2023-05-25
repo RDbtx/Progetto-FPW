@@ -5,6 +5,8 @@
 package it.unica.dieetech.NewProduct;
 
 import it.unica.dieetech.exceptions.InvalidParamException;
+import it.unica.dieetech.model.Immagine;
+import it.unica.dieetech.model.ImmagineFactory;
 import it.unica.dieetech.model.ProdottoFactory;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -13,7 +15,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import it.unica.dieetech.utils.Utils;
+import java.io.File;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import javax.servlet.http.HttpSession;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.http.Part;
 
 
 /**
@@ -21,6 +29,7 @@ import javax.servlet.http.HttpSession;
  * @author ricle
  */
 @WebServlet(name = "NewProduct", urlPatterns = {"/NewProduct"})
+@MultipartConfig
 public class NewProduct extends HttpServlet {
 
     /**
@@ -35,7 +44,7 @@ public class NewProduct extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        response.setContentType("text/html;charset=UTF-8");
+        response.setContentType("multipart/form-data");
         
         HttpSession session = request.getSession(false);
         
@@ -46,9 +55,13 @@ public class NewProduct extends HttpServlet {
         String description = request.getParameter("description_p");
         String utente_id = (String) session.getAttribute("username");
         String webpage = "login.jsp";
+        String url;
+        String Nome_file;
+        
+        Part file = request.getPart("image_p");
         
         
-        try{
+        try(InputStream contenutoFile = file.getInputStream()){
             Utils.checkString(product, 1, 20);
             Utils.checkInteger(quantity, 1, 1000 );
             Utils.checkFloat(price, 0, 999999);
@@ -58,17 +71,33 @@ public class NewProduct extends HttpServlet {
             int quantita = Integer.parseInt(quantity);
             float prezzo = Float.parseFloat(price);
             
-            ProdottoFactory.getInstance().setProdotto(product, description, quantita, software, prezzo, utente_id, "placeholder.jpg");
             
-            response.sendRedirect("prodottoInserito.jsp");
-        }    
-        catch(InvalidParamException e){
             
-            request.setAttribute("webpage", webpage);
-            request.setAttribute("errorMessage", e.getMessage());
-            request.getRequestDispatcher("error.jsp").forward(request,response);
+            if(file.getSubmittedFileName().isEmpty()){
+                url = "http://localhost:8080/ProgettoFPW/img/DT_bk.png";
+                Nome_file = "immagine stock";
+                }
+            
+            else{
+
+            File fileDaSalvare = new File("/Users/ricca/Documents/NetBeansProjects/ProgettoFPW/web/uploads/" + file.getSubmittedFileName());
+            Files.copy(contenutoFile,fileDaSalvare.toPath(),StandardCopyOption.REPLACE_EXISTING);
+            url = "http://localhost:8080/ProgettoFPW/uploads/" + file.getSubmittedFileName();
+            Nome_file = file.getSubmittedFileName();
             }
-        
+
+            if(ImmagineFactory.getInstance().addImmagine(new Immagine (request.getParameter("name"), Nome_file , url))){
+            
+                    ProdottoFactory.getInstance().setProdotto(product, description, quantita, software, prezzo, utente_id, url);
+                    response.sendRedirect("prodottoInserito.jsp");
+            	}
+            }catch(InvalidParamException e){
+                    request.setAttribute("webpage", webpage);
+                    request.setAttribute("errorMessage",e.getMessage());
+                    request.getRequestDispatcher("error.jsp").forward(request, response);
+            
+            }   
+ 
         
         
     }
