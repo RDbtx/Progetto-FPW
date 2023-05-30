@@ -10,11 +10,11 @@
         <title>DIEE Tech - Area Personale</title>
     </head>
     <body>
-        <c:if test="${empty utente.username}">
+        <c:if test="${empty username}">
             <c:redirect url="login.jsp"/>
         </c:if>
         
-        <c:if test="${not empty utente.username}">
+        <c:if test="${not empty username}">
             <%@include file="common/header.jspf" %> 
             <%@include file="common/nav.jspf" %> 
             <main class="col-8">

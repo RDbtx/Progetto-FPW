@@ -16,36 +16,43 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac, prodotti, oscilloscopio, router, ssd, arduino, fpga, verilog, vivado, cisco, switch">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/code.js"></script>
     </head>
     <body>
-        <c:if test="${empty utente.username}">
+        <c:if test="${empty username}">
             <c:redirect url="login.jsp"/>
         </c:if>
         
-        <c:if test="${not empty utente.username}">
+        <c:if test="${not empty username}">
             <%@include file="common/header.jspf" %> 
             <%@include file="common/nav.jspf" %>
-            <c:if test="${empty listaProdotti}">
+            <c:if test="${empty prodotto}">
                 <c:redirect url="store"/>
             </c:if>
-            <c:if test="${not empty listaProdotti}">
+            <c:if test="${not empty prodotto}">
                 <main class="col-8">
-                    <article>
-                        <h2>Lista prodotti</h2>
-                        <c:forEach items="${listaProdotti}" var="prodotto">
-                            <section class="product">
-                            <img src="${prodotto.getFoto()}" width="100" alt="Foto ${prodotto.getNome()}"/>
-                            <h3>${prodotto.getNome()}</h3>
-                            <p>
-                                Descrizione: ${prodotto.getDescrizione()}<br>
-                                Programmi necessari: ${prodotto.getSoftware()}<br>
-                                Prezzo: &#8364 ${prodotto.getPrezzo()}<br>
-                                Quantità disponibili: ${prodotto.getQuantita()}<br>
-                                Autore: ${prodotto.getUtente_id()}<br>
+                    <section>
+                        <h2>Prodotti del DIEE TECH</h2>
+                        
+                        <article class="product">
+                            <p id="fotoProdotto">
+                                <img src="${prodotto.getFoto()}" width="100" alt="Foto ${prodotto.getNome()}"/>
                             </p>
-                            </section>
-                        </c:forEach>
-                    </article>
+                            <h3 id="nomeProdotto">${prodotto.getNome()}</h3>
+                            <p id="datiProdotto">
+                                <b>Descrizione:</b> ${prodotto.getDescrizione()}<br>
+                                <b>Programmi necessari:</b> ${prodotto.getSoftware()}<br>
+                                <b>Prezzo:</b> &#8364 ${prodotto.getPrezzo()}<br>
+                                <b>Quantità disponibili:</b> ${prodotto.getQuantita()}<br>
+                                <b>Autore:</b> ${prodotto.getUtente_id()}<br>
+                            </p>
+                        </article>
+                        <article id="storeButtons">
+                            <button class="button" id="prevProduct"> < </button>
+                            <button class="button" id="nextProduct"> > </button>
+                        </article>
+                    </section>
                 </main>
                 <%@include file="common/aside.jspf" %> 
                 <%@include file="common/footer.jspf" %>
