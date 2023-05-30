@@ -2,13 +2,15 @@
 <nav>
     <ul>
         <li><a href="index.jsp">Home</a></li>
-        <li><a href="store.jsp">Store</a></li>
         <c:if test="${not empty username}">
+            <li><a href="store.jsp">Store</a></li>
             <li><a href="new_product.jsp">Inserisci prodotto</a></li>
         </c:if>
         <li><a href="chi_siamo.jsp">Chi siamo</a></li> 
-        <li><a href="login.jsp">Login</a></li>
-        <li><a href="AreaPersonale.jsp">Area Personale</a></li>
+        <li><a href="login.jsp">Login - Registati</a></li>
+        <c:if test="${not empty username}">
+            <li><a href="AreaPersonale.jsp">Area Personale</a></li>
+        </c:if>
     </ul>
 </nav>
 
