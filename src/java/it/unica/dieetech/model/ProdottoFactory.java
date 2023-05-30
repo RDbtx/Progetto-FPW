@@ -94,4 +94,36 @@ public class ProdottoFactory {
               try{conn.close();}catch(Exception e){}
           }
     }
+    public Prodotto getProdotto(String offset){
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet set = null;
+        
+        Prodotto prodotto = new Prodotto();
+        try{
+            conn = DatabaseManager.getInstance().getDbConnection();
+            String query = "SELECT * FROM prodotti LIMIT 1 OFFSET ?";
+            stmt = conn.prepareStatement(query);
+            stmt.setInt(1, Integer.parseInt(offset));
+            set = stmt.executeQuery();
+            while(set.next()){
+                prodotto.setId(set.getLong("id"));
+                prodotto.setNome(set.getString("nome"));
+                prodotto.setDescrizione(set.getString("descrizione"));
+                prodotto.setSoftware(set.getString("software"));
+                prodotto.setPrezzo(set.getFloat("prezzo"));
+                prodotto.setQuantita(set.getInt("quantita"));
+                prodotto.setUtente_id(set.getString("utente_id"));
+                prodotto.setFoto(set.getString("foto"));
+            }
+            return prodotto;
+        }catch(SQLException e){
+            Logger.getLogger(UtenteFactory.class.getName()).log(Level.SEVERE, null, e);
+        }finally{
+            try{set.close();}catch(Exception e){}
+            try{stmt.close();}catch(Exception e){}
+            try{conn.close();}catch(Exception e){}
+        }
+        return null;
+    }
 }

@@ -36,16 +36,18 @@ public class StoreServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        try{
-            List<Prodotto> prodotti = ProdottoFactory.getInstance().getAllProdotti();
-            if(prodotti != null){
-                request.setAttribute("listaProdotti", prodotti);
-                request.getRequestDispatcher("store.jsp").forward(request, response);
-            }else{
-                throw new InvalidParamException("Lista vuota");
-            }
-        }catch(InvalidParamException e){
-            request.getRequestDispatcher("error.jsp").forward(request, response);
+        String command = request.getParameter("offsetId");
+        if(command != null){
+            Prodotto prodotto = ProdottoFactory.getInstance().getProdotto(command);
+            request.setAttribute("prodotto", prodotto);
+            response.setContentType("application/json");
+            response.setHeader("Expires", "Sat, 6 May 1995 12:00:00 GMT");
+            response.setHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+            request.getRequestDispatcher("prodottoJSON.jsp").forward(request, response);
+        } else {
+            Prodotto prodotto = ProdottoFactory.getInstance().getProdotto("0");
+            request.setAttribute("prodotto", prodotto);
+            request.getRequestDispatcher("store.jsp").forward(request, response);
         }
     }
 

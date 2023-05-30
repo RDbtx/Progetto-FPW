@@ -74,15 +74,15 @@ public class NewProduct extends HttpServlet {
             
             
             if(file.getSubmittedFileName().isEmpty()){
-                url = "http://localhost:8080/ProgettoFPW/img/DT_bk.png";
+                url = "img/DT_bk.png";
                 Nome_file = "immagine stock";
                 }
             
             else{
 
-            File fileDaSalvare = new File("/Users/ricca/Documents/NetBeansProjects/ProgettoFPW/web/uploads/" + file.getSubmittedFileName());
+            File fileDaSalvare = new File("C:/Users/andre/Documents/NetBeansProjects/DieeTech Test Servlet/web/uploads/" + file.getSubmittedFileName());
             Files.copy(contenutoFile,fileDaSalvare.toPath(),StandardCopyOption.REPLACE_EXISTING);
-            url = "http://localhost:8080/ProgettoFPW/uploads/" + file.getSubmittedFileName();
+            url = "http://localhost:8080/DieeTech_Test_Servlet/uploads/" + file.getSubmittedFileName();
             Nome_file = file.getSubmittedFileName();
             }
 
