@@ -28,6 +28,23 @@ $(document).ready(function(){
         Size.css("font-size",currentSize+"px");
     }
     
+   //pagina in evidenza
+   var currentPage = window.location.pathname;
+  
+  $('.nav-link').removeClass('current');
+  
+  
+  $('.nav-link').each(function() {
+    var href = $(this).attr('href');
+
+    
+    if (currentPage.indexOf(href) !== -1) {
+      $(this).addClass('current');
+      return false; 
+    }
+  });
+    
+    //ajax
     var offset = 0;
     function aggiornaProdotto(prodotto){
         $('#fotoProdotto').html('<img src="'+ prodotto.foto +'" width="100" alt="Foto' + prodotto.name + '"/>');
