@@ -1,0 +1,385 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 29 mar 2023, 17:49:21
+    Author     : andre
+*/
+
+*{
+    box-sizing: border-box;
+}
+
+
+@media only screen and (min-width:768px)
+{
+    [class*="col-"]
+    {
+    float: left;
+    padding: 10px;
+    }
+    header img{              /*Logo sito desktop*/
+    float:left;
+    margin-right: 10px;
+    margin-left: 10px;
+    }
+    h1{                      /*Titolo sito*/
+    padding: 47px;
+    font-size: 35px;
+    letter-spacing: 0.51px;
+    line-height: 0.14px;
+    }
+    nav{                     /*Menù*/
+    background: #0d1117;    
+    position: sticky;
+    top: 0;
+    }
+    nav li{
+    font-size: 20px;
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-right: 2px solid #5CE1E6;
+    }
+    nav li:last-child{
+        border-right: 0px solid #000000;
+    }
+    nav li a:active{
+        font-weight: bold;
+    }
+    #img-index img {
+        height: 10%;
+        width: 30%;
+    }   
+    #sezione-news ul{       /*Sezione news in index*/
+        display: inline-flex;
+    }
+    #sezione-news li{
+        padding-right: 20px;
+    }
+    .notizia{
+        width: 90%;
+        height: 100%;
+    }
+    #sponsor ul li{         /*Lista loghi index*/ 
+    display: inline;
+    list-style-type: none;
+    margin-left: 15px;
+    padding: 10px;
+    }
+    #unione{                /*Regolazione loghi*/
+        margin-bottom: 8px;
+    }
+    #videolina{
+        margin-bottom: 5px;
+    }
+    #podda{
+        margin-top: 10px;
+    }
+    .product{               /*Store*/
+        padding: 5%;
+        padding-top: 15px;
+    }
+    .product img{          
+    float:right;
+    padding-top: 10px;
+    }
+    .person img{            /*Chi siamo*/
+        float: left;
+        margin-top: 20px;
+        padding-right: 2%;
+    }
+    #login {
+    width:50%;
+    margin-left: 25%;
+    }
+    #registration {
+    width:50%;
+    margin-left: 25%;
+    }
+                            /*New product*/
+    #product_new{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    }
+}
+
+.col-1 {width:8.33%;}
+.col-2 {width:16.66%;}
+.col-3 {width:25%;}
+.col-4 {width:33.33%;}
+.col-5 {width:41.66%;}
+.col-6 {width:50%;}
+.col-7 {width:58.33%;}
+.col-8 {width:66.66%;}
+.col-9 {width:75%;}
+.col-10 {width:83.33%;}
+.col-11 {width:91.66%;}
+.col-12 {width:100%;}
+
+@media only screen and (max-width:768px)
+{
+    [class*="col-"] {
+        float: none;
+        width: 100%;
+        padding: 10px;
+    }
+    body{
+        text-align: center;
+    }
+    nav li{
+        font-size: 20px;
+        list-style-type: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #login{
+        margin-left:15px;
+        margin-right:15px;
+    }
+    #registration{
+        margin-left:15px;
+        margin-right:15px;
+    }
+}
+
+@font-face {
+    font-family: Glacial Indifference;
+    font-weight: normal;
+    src: url(fonts/glacial-indifference.regular.otf);
+}
+
+@font-face {
+    font-family: Glacial Indifference;
+    font-weight: bold;
+    src: url(fonts/GlacialIndifference-Bold.otf);
+}
+
+body{
+    font-family: Glacial Indifference, Titillium Web, sans-serif;
+    color: white;
+    background: #0d1117;
+    margin: 0px;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+}
+
+a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+nav{                        /*Menù*/
+    text-align: center;    
+}
+nav ul{
+    padding-left: 0px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+#sponsor{                   /*Lista loghi index*/
+    text-align: center;
+    background: linear-gradient(#0d1117 15%,white 35%);
+}
+
+#sponsor ul li{
+    list-style-type: none;
+    margin-left: 15px;
+    padding: 5px;
+}
+#sponsor ul{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+#sezione-news{            /*Sezione news in index*/
+    background: radial-gradient(#c241ff 6.65%,#6b57ff 100%);
+    padding: 10px;
+}
+#sezione-news ul{         /*Sezione news in index*/
+    list-style-type: none;
+    padding-left: 0px;
+}
+.notizia{                 /*Sezione news in index*/  
+    background: white;
+    color: black;
+    padding: 2%;
+    margin: 2%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+main{
+    margin: 0px;
+}
+footer{
+    background: #27282c;
+}
+footer p{
+    margin: 0px;
+    padding: 3%;
+}
+aside{                    /*Contenuto secondario*/
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+}
+aside ul{
+    padding-left: 0px;
+}
+aside li{
+    list-style-type: none;
+    padding-bottom: 5px;
+    border-top: 1px solid black;
+    padding-top: 10px;
+    margin-bottom: 13%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+aside li:last-child{
+    margin: 0px;
+}
+.clear{                     /*Div per evitare sovrapposizioni*/
+    clear: both;
+}
+
+/*LOGIN*/
+
+#login {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    color: #FFFFFF;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: auto;
+}
+
+#login label{
+    display:block;
+    margin-top:10px;
+}
+
+
+#login input{
+    width:40%;
+    margin-top: 10px;
+}
+
+
+#login input[type="submit"]{
+    width: 40%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#registration {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: auto;
+}
+
+
+#registration label{
+    display:block;
+    margin-top:10px;
+}
+
+#registration input{
+    width:40%;
+    margin-top: 10px;
+}
+
+
+#registration input[type="submit"]{
+    width: 40%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+/*NEW_PRODUCT.HTML*/
+
+#product_new{
+    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    padding:20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: auto;
+}
+
+
+#product_new label{
+    display: block;
+    margin-top: 10px;
+}
+
+#product_new input{
+    width:50%;
+    margin-top: 10px;
+}
+
+#product_new input[type = "submit"]{
+    width:40%;
+    margin-top:2%;   
+}
+
+#product_new #prezzo_p{
+    text-align:right;
+}
+
+
+#product_new #quantity_p{
+    text-align:right;
+}
+
+#product_new textarea{
+    resize:none;
+    width:80%;
+    height:200px;
+}
+/*Chi siamo*/
+.person {
+    border-top: 1px solid #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 1%;
+}
+/*Store*/
+.button {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 5px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#storeButtons{
+    text-align: center;
+}
+
+.content{
+    font-size :16px;
+}
