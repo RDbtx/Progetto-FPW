@@ -14,11 +14,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/code.js"></script>
     </head>
     <body>
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %> 
-        <main class="col-8">
+        
+        <button id="decreaseA" class="button">A-</button>
+		<button id="resetA" class="button">A</button>
+		<button id="increaseA" class="button">A+</button>
+        
+        <main class="col-8 content">
             <h2>Il Nostro Team</h2>
             <p> Esperti ingegneri, discepoli del Dieedaci  </p>
             <div class="person">
