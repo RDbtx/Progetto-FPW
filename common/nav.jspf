@@ -1,0 +1,18 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/code.js"></script>
+<nav>
+    <ul>
+        <li><a href="index.jsp" class="nav-link current">Home</a></li>
+        <c:if test="${not empty username}">
+            <li><a href="store.jsp" class="nav-link">Store</a></li>
+            <li><a href="new_product.jsp" class="nav-link">Inserisci prodotto</a></li>
+        </c:if>
+        <li><a href="chi_siamo.jsp" class="nav-link">Chi siamo</a></li> 
+        <li><a href="login.jsp" class="nav-link">Login - Registati</a></li>
+        <c:if test="${not empty username}">
+            <li><a href="AreaPersonale.jsp" class="nav-link">Area Personale</a></li>
+        </c:if>
+    </ul>
+</nav>
+
