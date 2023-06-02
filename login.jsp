@@ -11,13 +11,19 @@
         <meta name="keywords" content="DIEE,aziende, technologies,registrazione,login,acccesso,accedi,profilo">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery.js"></script>
+	    <script type="text/javascript" src="js/code.js"></script>
     </head>
     <body>
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %> 
-        <main class="col-8">
+        
+        <button id="decreaseA" class="button">A-</button>
+	    <button id="resetA" class="button">A</button>
+	    <button id="increaseA" class="button">A+</button>
+        
+        <main class="col-8 content">
             <h2 class="login-reg-title">Welcome back to DIEE Account</h2>
-            
             
             <section id="login">
                 <c:if test="${empty username}">
