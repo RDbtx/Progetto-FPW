@@ -25,7 +25,6 @@
         <main class="col-8 content">
             <h2 class="login-reg-title">Welcome back to DIEE Account</h2>
             
-            
             <section id="login">
                 <c:if test="${empty username}">
                 <h3>Accedi all'area riservata del DIEE Tech.</h3>
