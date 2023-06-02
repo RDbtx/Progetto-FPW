@@ -65,8 +65,8 @@ $(document).ready(function(){
     });
    
     function updateSize(){
-        var Size = $(".content");
-        Size.css("font-size",currentSize+"px");
+        var size = $(".content");
+        size.css("font-size",currentSize+"px");
     }
     
 });
