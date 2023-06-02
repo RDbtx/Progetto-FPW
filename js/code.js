@@ -46,5 +46,28 @@ $(document).ready(function(){
           error: function(data, state){}
        });
     });
+    
+    //Bottoni per dimensione Font
+    var currentSize = 16;
+    $("#decreaseA").click(function(){
+        currentSize -= 3;
+        updateSize();
+    });
+    
+    $("#resetA").click(function(){
+        currentSize = 16;
+        updateSize();
+    });
+    
+    $("#increaseA").click(function(){
+        currentSize +=3;
+        updateSize();
+    });
+   
+    function updateSize(){
+        var Size = $(".content");
+        Size.css("font-size",currentSize+"px");
+    }
+    
 });
 
