@@ -17,6 +17,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery.js"></script>
+	    <script type="text/javascript" src="js/code.js"></script>
     </head>
     <body>
         <c:if test="${empty username}">
@@ -25,8 +27,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         
         <c:if test="${not empty username}">
         <%@include file="common/header.jspf" %> 
-        <%@include file="common/nav.jspf" %> 
-        <main class="col-8">    
+        <%@include file="common/nav.jspf" %>
+            
+        <button id="decreaseA" class="button">A-</button>
+	    <button id="resetA" class="button">A</button>
+	    <button id="increaseA" class="button">A+</button>   
+            
+        <main class="col-8 content">    
             <section id="product_new" >
                 <h2>Inserisci prodotto</h2>
             <form enctype="multipart/form-data" action="NewProduct" method="POST">
