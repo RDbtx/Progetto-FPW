@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="img/DT_bk_W.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/code.js"></script>
+	<script type="text/javascript" src="js/code.js"></script>
         <title>DIEE Tech - Errore</title>
     </head>
     <body>
@@ -16,8 +16,8 @@
         <%@include file="common/nav.jspf" %> 
         
         <button id="decreaseA" class="button">A-</button>
-		<button id="resetA" class="button">A</button>
-		<button id="increaseA" class="button">A+</button>
+	<button id="resetA" class="button">A</button>
+	<button id="increaseA" class="button">A+</button>
         
         <main class="col-8 content">
             <h1>Errore:</h1>
