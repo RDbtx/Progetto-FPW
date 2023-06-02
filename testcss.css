@@ -380,6 +380,15 @@ aside li:last-child{
     text-align: center;
 }
 
+//font size dei bottoni
 .content{
     font-size :16px;
 }
+
+//link in evidenza
+.nav-link.current {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
