@@ -368,7 +368,7 @@ aside li:last-child{
     color: #FFFFFF;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    padding: 15px 32px;
+    padding: 5px 15px;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
@@ -378,4 +378,9 @@ aside li:last-child{
 
 #storeButtons{
     text-align: center;
+}
+
+/*classe per il testo*/
+.content{
+    font-size :16px;
 }
