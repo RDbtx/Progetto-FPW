@@ -12,15 +12,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="js/jquery.js"></script>
-	    <script type="text/javascript" src="js/code.js"></script>
+	<script type="text/javascript" src="js/code.js"></script>
     </head>
     <body>
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %> 
         
         <button id="decreaseA" class="button">A-</button>
-	    <button id="resetA" class="button">A</button>
-	    <button id="increaseA" class="button">A+</button>
+	<button id="resetA" class="button">A</button>
+	<button id="increaseA" class="button">A+</button>
         
         <main class="col-8 content">
             <h2 class="login-reg-title">Welcome back to DIEE Account</h2>
