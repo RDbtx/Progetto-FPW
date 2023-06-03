@@ -36,10 +36,11 @@ $(document).ready(function(){
   
   $('.nav-link').each(function() {
     var href = $(this).attr('href');
-
     
     if (currentPage.indexOf(href) !== -1) {
       $(this).addClass('current');
+      $('.home_current').removeClass('home_current');
+      
       return false; 
     }
   });
