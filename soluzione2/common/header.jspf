@@ -1,0 +1,10 @@
+<%-- 
+    Document   : header
+    Created on : 4 mag 2023, 17:43:20
+    Author     : andre
+--%>
+
+<header>
+    <a href="index.jsp"><img src="img/DT_no-bk_nav.png" width="100" height="100" alt="Logo DIEE Tech"/></a>
+    <h1>DIEE TECH <small>DIEEDACI TECHNOLOGIES</small></h1>
+</header>
