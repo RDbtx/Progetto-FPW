@@ -20,10 +20,6 @@
             <%@include file="common/header.jspf" %> 
             <%@include file="common/nav.jspf" %> 
             
-            <button id="decreaseA" class="button">A-</button>
-	        <button id="resetA" class="button">A</button>
-	        <button id="increaseA" class="button">A+</button>
-            
             <main class="col-8 content">
                 <h1>Benvenuto ${utente.nome}!</h1>
                 <div class="person"><h3>Informazioni personali:</h3><br>

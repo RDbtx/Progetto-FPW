@@ -21,10 +21,6 @@
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %> 
         
-        <button id="decreaseA" class="button">A-</button>
-        <button id="resetA" class="button">A</button>
-        <button id="increaseA" class="button">A+</button>
-        
         <main class="col-8 content">
             <h2>Utente registrato con successo!</h2>
             <a href="login.jsp"><button type="button">Accedi</button></a>

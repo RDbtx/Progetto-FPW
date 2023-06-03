@@ -21,10 +21,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %> 
         
-        <button id="decreaseA" class="button">A-</button>
-	<button id="resetA" class="button">A</button>
-	<button id="increaseA" class="button">A+</button>
-        
         <main class="col-8 content">
             <h2>Il Nostro Team</h2>
             <p> Esperti ingegneri, discepoli del Dieedaci  </p>

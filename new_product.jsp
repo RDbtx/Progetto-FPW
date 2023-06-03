@@ -27,11 +27,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         
         <c:if test="${not empty username}">
         <%@include file="common/header.jspf" %> 
-        <%@include file="common/nav.jspf" %>
-            
-        <button id="decreaseA" class="button">A-</button>
-    	<button id="resetA" class="button">A</button>
-	<button id="increaseA" class="button">A+</button>   
+        <%@include file="common/nav.jspf" %>   
             
         <main class="col-8 content">    
             <section id="product_new" >
