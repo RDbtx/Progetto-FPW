@@ -3,7 +3,7 @@
 <script type="text/javascript" src="js/code.js"></script>
 <nav>
     <ul>
-        <li><a href="index.jsp" class="nav-link current">Home</a></li>
+        <li><a href="index.jsp" class="home_current">Home</a></li>
         <c:if test="${not empty username}">
             <li><a href="store.jsp" class="nav-link">Store</a></li>
             <li><a href="new_product.jsp" class="nav-link">Inserisci prodotto</a></li>
@@ -12,6 +12,7 @@
         <li><a href="login.jsp" class="nav-link">Login - Registati</a></li>
         <c:if test="${not empty username}">
             <li><a href="AreaPersonale.jsp" class="nav-link">Area Personale</a></li>
+        </c:if>
         </c:if>
     </ul>
 </nav>
