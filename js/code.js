@@ -13,8 +13,7 @@ $(document).ready(function(){
         currentSize -= 3;
         updateSize();
     });
-    
-    
+   
     $("#resetA").click(function(){
         currentSize = 16;
         updateSize();
@@ -30,6 +29,7 @@ $(document).ready(function(){
         Size.css("font-size",currentSize+"px");
     }
     
+    //aggiornamento prodotto
     var offset = 0;
     function aggiornaProdotto(prodotto){
         $('#fotoProdotto').html('<img src="'+ prodotto.foto +'" width="100" alt="Foto' + prodotto.name + '"/>');
