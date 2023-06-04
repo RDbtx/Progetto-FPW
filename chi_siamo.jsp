@@ -45,7 +45,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </div>
             <div class="person">
                 <img src="img/chi_siamo/RDphoto.jpg" height="100" alt="Profilo Deidda"/>
-                <section class="content info_p">
+                <section class="content">
                 <h3>Riccardo Deidda</h3>
                 <h4>Graphic Designer</h4>
                 Forte di aver passato PAIS al primo appello, sfidò il gran maestro
