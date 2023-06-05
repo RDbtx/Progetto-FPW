@@ -15,11 +15,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <meta name="keywords" content="DIEE, technologies, web, internet, windows, android, mac">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/homecode.js"></script>
+        <script type="text/javascript" src="js/code.js"></script>
     </head>
     <body>
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %>
-        <main class="col-8">
+        
+                
+        <main class="col-8 content">
             <section>
                 <h3>Di cosa si occupa Diee Tech?</h3>
                 <p>

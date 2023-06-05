@@ -11,25 +11,30 @@
         <meta name="keywords" content="DIEE,aziende, technologies,registrazione,login,acccesso,accedi,profilo">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/logincode.js"></script>
+        <script type="text/javascript" src="js/code.js"></script>
     </head>
     <body>
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %> 
-        <main class="col-8">
+        
+        
+        <main class="col-8 content">
             <h2 class="login-reg-title">Welcome back to DIEE Account</h2>
             
             
             <section id="login">
                 <c:if test="${empty username}">
                 <h3>Accedi all'area riservata del DIEE Tech.</h3>
-                <form action="login" method="POST">
+                <form action="login" method="POST" id="formLog">
                     <label  for="username">Username</label>
-                    <input  type="text" name="username" id="username">
-                    <br>
+                    <input  type="text" name="username" id="username" class='inputLog'>
+                    <p class="js" id="caratteriRimanentiUser" ></p>
                     <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
-                    <br>
-                    <input type="submit" value="Accedi">
+                    <input type="password" name="password" id="password" class='inputLog'>
+                    <p class="js" id="caratteriRimanentiPass" ></p>
+                    <input type="submit" value="Accedi" id='submitLog'>
                 </form>
                 </c:if>
                 <c:if test="${not empty username}">
@@ -50,33 +55,33 @@
         
         <h2 class="login-reg-title">Welcome to DIEE Registration</h2>
         <section id="registration">
-            <form enctype="multipart/form-data" action="registrazione" method = "POST">
+            <form enctype="multipart/form-data" action="registrazione" method="POST" id="formReg">
                 <h3>Compila il form per registrarti:</h3>
                 <label for="regname">Nome</label>
-                <input type="text" id="regname" placeholder="Mario" name="name">
-                <br>
+                <input type="text" id="regname" name="name">
+                <p class="js" id="caratteriRimanentiRegname" ></p>
                 <label for="regsurname">Cognome</label>
                 <input type="text" id="regsurname" placeholder="Rossi" name="surname">
-                <br>
+                <p class="js" id="caratteriRimanentiRegsurname" ></p>
                 <label for="regsurname">Username</label>
                 <input type="text" id="regusername" placeholder="mariorossi00" name="username">
-                <br>
+                <p class="js" id="caratteriRimanentiRegusername" ></p>
                 <label for="rege-mail">E-mail</label>
                 <input type="email" id="rege-mail" placeholder="...@gmail.com" name="e_mail">
-                <br>
-                <label for="regsurname">Città</label>
+                <p class="js" id="caratteriRimanentiRegemail" ></p>
+                <label for="regcity">Città</label>
                 <input type="text" id="regcity" placeholder="Roma" name="citta">
-                <br>
+                <p class="js" id="caratteriRimanentiRegcity" ></p>
                 <label for="regpassword">Password</label>
                 <input type="password" id="regpassword" placeholder="password" name="password">
-                <br>
+                <p class="js" id="caratteriRimanentiRegpassword" ></p>
                 <label for="psw-repeat">Ripetere la password</label>
                 <input type="password" placeholder="password" name="psw_repeat" id="psw_repeat">
-                <br>
+                <p class="js" id="caratteriRimanentiRegpswrepeat" ></p>
                 <label for="image">Foto profilo</label>
                 <input type="file" accept="image/png, image/jpeg" placeholder="immagine" name="image" id="image">
                 <br>
-                <input type="submit" value="Registrati">
+                <input type="submit" value="Registrati" id='submitReg'>
                 <br>
                 <br>
             </form>

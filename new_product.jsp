@@ -17,31 +17,44 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/inserimentocode.js"></script>
+        <script type="text/javascript" src="js/code.js"></script>
+        
     </head>
     <body>
-        <c:if test="${empty utente.username}">
+        <c:if test="${empty username}">
             <c:redirect url="login.jsp"/>
         </c:if>
         
-        <c:if test="${not empty utente.username}">
+        <c:if test="${not empty username}">
         <%@include file="common/header.jspf" %> 
         <%@include file="common/nav.jspf" %> 
-        <main class="col-8">    
+        
+        
+        <main class="col-8 content">    
             <section id="product_new" >
                 <h2>Inserisci prodotto</h2>
-            <form action="NewProduct" method="POST">
+            <form enctype="multipart/form-data" action="NewProduct" method="POST" id="formProdotto">
                 <label for ="product_p">Prodotto: </label>
-                <input type = "text" id = "product_p" name = "product_p"><br>
+                <input type = "text" id = "product_p" name = "product_p">
+                <p id="caratteriRimanentiProdotto"></p>
                 <label for="quantity_p">Quantità:</label>
-                <input type="number" id="quantity_p" name="quantity_p" min = "1" max ="1000" value = "1"><br>
+                <input type="number" id="quantity_p" name="quantity_p" min = "1" max ="1000" value = "1">
+                <p id="caratteriRimanentiQuantita"></p>
                 <label for ="software_p">Software:</label>
-                <input type ="text" id = "software_p" name = "software_p"><br>
+                <input type ="text" id = "software_p" name = "software_p">
+                <p id="caratteriRimanentiSoftware"></p>
                 <label for="prezzo_p">Prezzo:</label>
-                <input type = "number" id = "prezzo_p" name = "prezzo_p" min ="0.00" step ="0.1"  value ="0.00"><br>
+                <input type = "number" id = "prezzo_p" name = "prezzo_p" min ="0.00" step ="0.1"  value ="0.00">
+                <p id="caratteriRimanentiPrezzo"></p>
                 <label for ="image_p">Immagine:</label>
-                <input type="file" id = "image_p" name = "image_p"><br>
+                <input type="file" accept="image/png, image/jpeg" placeholder="immagine" name="image_p" id="image">
+                <br>
                 <label for ="description_p">Descrizione:</label>
-                <textarea maxlength="10000" name ="description_p" id ="description_p" placeholder="max 1000 caratteri"></textarea><br>
+                <textarea maxlength="10000" name ="description_p" id ="description_p" placeholder="max 1000 caratteri"></textarea>
+                <p id="caratteriRimanentiDescrizione"></p>
+                <br>
                 <input type="submit">
             </form>
             </section>  

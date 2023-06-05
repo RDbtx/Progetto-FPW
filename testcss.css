@@ -80,7 +80,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     #podda{
         margin-top: 10px;
     }
-    .product img{           /*Store*/
+    .product{               /*Store*/
+        padding: 5%;
+        padding-top: 15px;
+    }
+    .product img{          
     float:right;
     padding-top: 10px;
     }
@@ -354,6 +358,42 @@ aside li:last-child{
 /*Chi siamo*/
 .person {
     border-top: 1px solid #FFFFFF;
-    padding-top: 10px;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+/*Store*/
+.button {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(31,23,156,1) 0%, rgba(9,23,121,1) 50%, rgba(18,89,99,1) 100%);
+    color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 5px 15px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#storeButtons{
+    text-align: center;
+}
+
+/*classe per il testo*/
+.content{
+    font-size :16px;
+}
+
+/* Stili per la classe "active" */
+
+a.home_current{
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+a.current{
+    font-weight: bold;
+    text-decoration: none;  
 }
