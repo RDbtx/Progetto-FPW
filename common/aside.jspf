@@ -5,6 +5,10 @@
 --%>
 
 <aside class="col-4">
+    <button id="decreaseA" class="button">A-</button>
+    <button id="resetA" class="button">A</button>
+    <button id="increaseA" class="button">A+</button>
+    
     <p>PUBBLICITA'</p>
     <ul>
         <li><a href="https://www.laforneria.it/shop-online/"><img src="img/ads/Pubblicita sito.png" height="200" alt="Ads pubblicità "/></a></li>
