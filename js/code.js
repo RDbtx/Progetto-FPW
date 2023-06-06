@@ -7,37 +7,41 @@
 $(document).ready(function(){
     //Bottoni per dimensione Font
     var currentSize = 16;
-    var currentWidth = 8;
-    var currentHeight = 8;
+    var currentWidth = 9;
+    var currentHeight = 9;
+    var currentMarginTop = 20;
     
     //bottoni
     $("#decreaseA").click(function(){
         //limite riduzione dimensione(min 7px)
         if(currentSize>=10){
            currentSize -= 3;
-           currentWidth -= 0.8;
-           currentHeight -= 0.8;
+           currentWidth -= 0.9;
+           currentHeight -= 0.9;
+           currentMarginTop -= 5;
            updateSize();
            updateImg(); 
         }
-        
+
     });
-    
-    
+
+
     $("#resetA").click(function(){
         currentSize = 16;
-        currentWidth = 8;
-        currentHeight = 8;
+        currentWidth = 9;
+        currentHeight = 9;
+        currentMarginTop = 20;
         updateSize();
         updateImg();
     });
-    
+
     $("#increaseA").click(function(){
         //limite massimo incremento dimensione(max 28px)
         if(currentSize<=25){
         currentSize +=3;
-        currentWidth += 0.8;
-        currentHeight += 0.8;
+        currentWidth += 0.9;
+        currentHeight += 0.9;
+        currentMarginTop += 5;
         updateSize();
         updateImg();}
     });
@@ -47,7 +51,7 @@ $(document).ready(function(){
         Size.css("font-size",currentSize+"px");
     }
     function updateImg(){
-        $(".person img").css({"width" : currentWidth + "%", "height": currentHeight + "%"});
+        $(".person img").css({"width" : currentWidth + "%", "height": currentHeight + "%", "margin-top": currentMarginTop + "px"});
     }
     
     var offset = 0;
