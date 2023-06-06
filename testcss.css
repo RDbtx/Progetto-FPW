@@ -384,3 +384,8 @@ aside li:last-child{
 .content{
     font-size :16px;
 }
+
+.person img{
+    width: 9%;
+    height: 9%;
+}
