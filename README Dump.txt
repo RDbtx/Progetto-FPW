@@ -1,0 +1,1 @@
+Su pgAdmin4 creare un nuovo database chiamato "dieetech", successivamente cliccare col tasto destro e premere su Restore, caricare il file dieetech.sql e premere direttamente il pulsante Restore. 
